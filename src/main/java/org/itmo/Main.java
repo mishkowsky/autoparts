@@ -1,86 +1,170 @@
 package org.itmo;
 
+import org.javatuples.Pair;
+
 import java.util.List;
 
 public class Main {
 
+    static int EQUALS_STRING_LEN = 93;
+
     public static void main(String[] args) {
-        measureTime(5000);
-        measureTime(50000);
-        measureTime(250000);
-        // RESULTS:
-        // =====================================================================================
-        // Measure #01; N: 5000; Total profit: 447461846.63 rub; Elapsed time: 47656700 ns;
-        // Measure #02; N: 5000; Total profit: -628917180.95 rub; Elapsed time: 10379900 ns;
-        // Measure #03; N: 5000; Total profit: -245288211.52 rub; Elapsed time: 10648300 ns;
-        // Measure #04; N: 5000; Total profit: 360243775.95 rub; Elapsed time: 11775600 ns;
-        // Measure #05; N: 5000; Total profit: -691873249.86 rub; Elapsed time: 9307800 ns;
-        // Measure #06; N: 5000; Total profit: 954083338.89 rub; Elapsed time: 10550600 ns;
-        // Measure #07; N: 5000; Total profit: -83363318.85 rub; Elapsed time: 9626500 ns;
-        // Measure #08; N: 5000; Total profit: 15743846.42 rub; Elapsed time: 12859500 ns;
-        // Measure #09; N: 5000; Total profit: -1514854279.29 rub; Elapsed time: 12746700 ns;
-        // Measure #10; N: 5000; Total profit: -172243056.50 rub; Elapsed time: 10340100 ns;
-        // Measure #11; N: 5000; Total profit: -887009704.78 rub; Elapsed time: 10305000 ns;
-        // Measure #12; N: 5000; Total profit: 2301019968.83 rub; Elapsed time: 9937200 ns;
-        // Measure #13; N: 5000; Total profit: 831399252.47 rub; Elapsed time: 10662200 ns;
-        // Measure #14; N: 5000; Total profit: -178043226.79 rub; Elapsed time: 10362100 ns;
-        // Measure #15; N: 5000; Total profit: 1348311922.10 rub; Elapsed time: 10210800 ns;
-        // Average time: 13157933,33 ns;
+        System.out.println();
+        System.out.println("Counting complex statistics");
+        System.out.println();
+        measureTimeComplexStats(5000);
+        measureTimeComplexStats(50000);
+        measureTimeComplexStats(250000);
         //
-        // =====================================================================================
-        // Measure #01; N: 50000; Total profit: 4044129006.53 rub; Elapsed time: 73842400 ns;
-        // Measure #02; N: 50000; Total profit: -993275601.01 rub; Elapsed time: 76991000 ns;
-        // Measure #03; N: 50000; Total profit: -4721667127.21 rub; Elapsed time: 108508000 ns;
-        // Measure #04; N: 50000; Total profit: 3496435015.76 rub; Elapsed time: 130470900 ns;
-        // Measure #05; N: 50000; Total profit: 9124828131.77 rub; Elapsed time: 98334700 ns;
-        // Measure #06; N: 50000; Total profit: -3357039158.45 rub; Elapsed time: 117047200 ns;
-        // Measure #07; N: 50000; Total profit: 7020862115.87 rub; Elapsed time: 72906400 ns;
-        // Measure #08; N: 50000; Total profit: 848387566.89 rub; Elapsed time: 132595500 ns;
-        // Measure #09; N: 50000; Total profit: 457690405.43 rub; Elapsed time: 119277100 ns;
-        // Measure #10; N: 50000; Total profit: 1703425033.86 rub; Elapsed time: 73808800 ns;
-        // Measure #11; N: 50000; Total profit: 2329275954.54 rub; Elapsed time: 74386500 ns;
-        // Measure #12; N: 50000; Total profit: 8380690678.46 rub; Elapsed time: 81186000 ns;
-        // Measure #13; N: 50000; Total profit: 4174142817.19 rub; Elapsed time: 83396100 ns;
-        // Measure #14; N: 50000; Total profit: -42202362.94 rub; Elapsed time: 81330500 ns;
-        // Measure #15; N: 50000; Total profit: 5878886013.26 rub; Elapsed time: 81847900 ns;
-        // Average time: 93728600,00 ns;
+        // Counting complex statistics
         //
-        // =====================================================================================
-        // Measure #01; N: 250000; Total profit: 12788972824.40 rub; Elapsed time: 514821700 ns;
-        // Measure #02; N: 250000; Total profit: 23691244842.66 rub; Elapsed time: 516938900 ns;
-        // Measure #03; N: 250000; Total profit: 8077856619.82 rub; Elapsed time: 491607400 ns;
-        // Measure #04; N: 250000; Total profit: 19662938954.61 rub; Elapsed time: 503293200 ns;
-        // Measure #05; N: 250000; Total profit: 23618213589.77 rub; Elapsed time: 367914600 ns;
-        // Measure #06; N: 250000; Total profit: 21280867434.48 rub; Elapsed time: 374528600 ns;
-        // Measure #07; N: 250000; Total profit: 21163627675.52 rub; Elapsed time: 524417400 ns;
-        // Measure #08; N: 250000; Total profit: 16662261673.16 rub; Elapsed time: 461020500 ns;
-        // Measure #09; N: 250000; Total profit: 11619614677.87 rub; Elapsed time: 401201700 ns;
-        // Measure #10; N: 250000; Total profit: 11661735850.55 rub; Elapsed time: 487315500 ns;
-        // Measure #11; N: 250000; Total profit: 21230392048.87 rub; Elapsed time: 556515200 ns;
-        // Measure #12; N: 250000; Total profit: 30912486940.69 rub; Elapsed time: 373890000 ns;
-        // Measure #13; N: 250000; Total profit: 29453371728.96 rub; Elapsed time: 531513400 ns;
-        // Measure #14; N: 250000; Total profit: 14690501823.64 rub; Elapsed time: 410955200 ns;
-        // Measure #15; N: 250000; Total profit: 14004073605.71 rub; Elapsed time: 437342900 ns;
-        // Average time: 463551746,67 ns;
+        // =============================================================================================
+        // For Loop.			N: 5000; Elapsed time: 37550500 ns;
+        //						Best buyer: Артамонов Михаил Маркович (225032051.36 rub);
+        //						Most popular product: Прочее: блок цилиндров (380);
+        //						Most popular category: ENGINE (12689);
+        //						Total profit: 915698634.04 rub;
+        // Standard collectors.	N: 5000; Elapsed time: 55674900 ns;
+        //						Best buyer: Артамонов Михаил Маркович (225032051.36 rub);
+        //						Most popular product: Прочее: блок цилиндров (380);
+        //						Most popular category: ENGINE (12689);
+        //						Total profit: 915698634.04 rub;
+        // Custom collector.	N: 5000; Elapsed time: 19553200 ns;
+        //						Best buyer: Артамонов Михаил Маркович (225032051.36 rub);
+        //						Most popular product: Прочее: блок цилиндров (380);
+        //						Most popular category: ENGINE (12689);
+        //						Total profit: 915698634.04 rub;
+        // =============================================================================================
+        // For Loop.			N: 50000; Elapsed time: 133659000 ns;
+        //						Best buyer: Денисова Василиса Даниловна (539349383.45 rub);
+        //						Most popular product: Катализаторы автомобильные (3174);
+        //						Most popular category: ENGINE (123924);
+        //						Total profit: 6409167161.20 rub;
+        // Standard collectors.	N: 50000; Elapsed time: 139630800 ns;
+        //						Best buyer: Денисова Василиса Даниловна (539349383.45 rub);
+        //						Most popular product: Катализаторы автомобильные (3174);
+        //						Most popular category: ENGINE (123924);
+        //						Total profit: 6409167161.20 rub;
+        // Custom collector.	N: 50000; Elapsed time: 62931100 ns;
+        //						Best buyer: Денисова Василиса Даниловна (539349383.45 rub);
+        //						Most popular product: Катализаторы автомобильные (3174);
+        //						Most popular category: ENGINE (123924);
+        //						Total profit: 6409167161.20 rub;
+        // =============================================================================================
+        // For Loop.			N: 250000; Elapsed time: 348278300 ns;
+        //						Best buyer: Климова Алиса Михайловна (1765068384.03 rub);
+        //						Most popular product: Насосы вакуумные (15463);
+        //						Most popular category: ENGINE (621764);
+        //						Total profit: 9797805530.78 rub;
+        // Standard collectors.	N: 250000; Elapsed time: 652558600 ns;
+        //						Best buyer: Климова Алиса Михайловна (1765068384.03 rub);
+        //						Most popular product: Насосы вакуумные (15463);
+        //						Most popular category: ENGINE (621764);
+        //						Total profit: 9797805530.78 rub;
+        // Custom collector.	N: 250000; Elapsed time: 314775600 ns;
+        //						Best buyer: Климова Алиса Михайловна (1765068384.03 rub);
+        //						Most popular product: Насосы вакуумные (15463);
+        //						Most popular category: ENGINE (621764);
+        //						Total profit: 9797805530.78 rub;
+
+        System.out.println();
+        System.out.println("Counting only total profit");
+        System.out.println();
+        measureTimeTotalProfit(5000);
+        measureTimeTotalProfit(50000);
+        measureTimeTotalProfit(250000);
+        //
+        // Counting only total profit
+        //
+        // =============================================================================================
+        // For Loop.			N: 5000; Elapsed time: 716100 ns;
+        //						Total profit: 791097810.14 rub;
+        // Standard collectors.	N: 5000; Elapsed time: 1927100 ns;
+        //						Total profit: 791097810.14 rub;
+        // Custom collector.	N: 5000; Elapsed time: 2904100 ns;
+        //						Total profit: 791097810.14 rub;
+        // =============================================================================================
+        // For Loop.			N: 50000; Elapsed time: 7683100 ns;
+        //						Total profit: 3073485296.97 rub;
+        // Standard collectors.	N: 50000; Elapsed time: 1992000 ns;
+        //						Total profit: 3073485296.97 rub;
+        // Custom collector.	N: 50000; Elapsed time: 1447700 ns;
+        //						Total profit: 3073485296.97 rub;
+        // =============================================================================================
+        // For Loop.			N: 250000; Elapsed time: 7274900 ns;
+        //						Total profit: 16326204462.67 rub;
+        // Standard collectors.	N: 250000; Elapsed time: 7224600 ns;
+        //						Total profit: 16326204462.67 rub;
+        // Custom collector.	N: 250000; Elapsed time: 8106000 ns;
+        //						Total profit: 16326204462.67 rub;
     }
 
-    public final static int SAMPLES_COUNT = 15;
+    public static void measureTimeComplexStats(int n) {
+        System.out.println("=".repeat(EQUALS_STRING_LEN));
+        List<Product> products = Product.ProductGenerator.generateProducts();
+        List<Buyer> buyers = Buyer.BuyersGenerator.generateBuyers(100);
+        List<Purchase> purchases = Purchase.PurchaseGenerator.generatePurchases(n, products, buyers);
+        long start = System.nanoTime();
+        StatisticsCounter.Result result = StatisticsCounter.countForLoop(purchases);
+        long finish = System.nanoTime();
+        printReport(finish - start, result, n, "For Loop.\t\t\t");
 
-    public static void measureTime(int n) {
-        System.out.println("=====================");
-        long acc = 0;
-        for (int i = 0; i < SAMPLES_COUNT; i++) {
-            List<Product> products = Product.ProductGenerator.generateProducts();
-            List<Buyer> buyers = Buyer.BuyersGenerator.generateBuyers(100);
-            List<Purchase> purchases = Purchase.PurchaseGenerator.generatePurchases(n, products, buyers);
-            long start = System.nanoTime();
-            StatisticsCounter sc = new StatisticsCounter(purchases);
-            long finish = System.nanoTime();
-            System.out.printf(
-                    "Measure #%02d; N: %d; Total profit: %d.%02d rub; Elapsed time: %d ns;%n",
-                    i + 1, n, sc.getTotalProfit() / 100, Math.abs(sc.getTotalProfit() % 100), finish - start);
-            acc += finish - start;
-        }
-        System.out.printf("Average time: %.2f ns;%n%n", (acc * 1.0) / SAMPLES_COUNT);
+        start = System.nanoTime();
+        result = StatisticsCounter.countStandardCollectors(purchases);
+        finish = System.nanoTime();
+        printReport(finish - start, result, n, "Standard collectors.\t");
+
+        start = System.nanoTime();
+        result = StatisticsCounter.countCustomCollector(purchases);
+        finish = System.nanoTime();
+        printReport(finish - start, result, n, "Custom collector.\t\t");
+    }
+
+    public static void printReport(long time, StatisticsCounter.Result result, int n, String methodName) {
+        Pair<Buyer, Long> bestBuyer = result.getBestBuyer();
+        Pair<Product, Integer> mostPopularProduct = result.getMostPopularProduct();
+        Pair<Product.Category, Integer> mostPopularCategory = result.getMostPopularCategory();
+        System.out.printf(
+                "%sN: %d; Elapsed time: %d ns;%n" +
+                        "\t\t\t\t\t\tBest buyer: %s (%d.%02d rub);%n" +
+                        "\t\t\t\t\t\tMost popular product: %s (%d);%n" +
+                        "\t\t\t\t\t\tMost popular category: %s (%d);%n" +
+                        "\t\t\t\t\t\tTotal profit: %d.%02d rub;%n",
+                methodName, n, time,
+                bestBuyer.getValue0().fullName(), bestBuyer.getValue1() / 100, bestBuyer.getValue1() % 100,
+                mostPopularProduct.getValue0().name(), mostPopularProduct.getValue1(),
+                mostPopularCategory.getValue0(), mostPopularCategory.getValue1(),
+                result.totalProfit() / 100, Math.abs(result.totalProfit() % 100)
+        );
+    }
+
+    public static void measureTimeTotalProfit(int n) {
+        System.out.println("=".repeat(EQUALS_STRING_LEN));
+        List<Product> products = Product.ProductGenerator.generateProducts();
+        List<Buyer> buyers = Buyer.BuyersGenerator.generateBuyers(100);
+        List<Purchase> purchases = Purchase.PurchaseGenerator.generatePurchases(n, products, buyers);
+        long start = System.nanoTime();
+        long result = StatisticsCounter.countTotalProfitForLoop(purchases);
+        long finish = System.nanoTime();
+        System.out.printf(
+                "For Loop.\t\t\t\tN: %d; Elapsed time: %d ns;%n\t\t\t\t\t\tTotal profit: %d.%02d rub;%n",
+                n, finish - start, result / 100, Math.abs(result % 100)
+        );
+
+        start = System.nanoTime();
+        result = StatisticsCounter.countTotalProfitStandardCollector(purchases);
+        finish = System.nanoTime();
+        System.out.printf(
+                "Standard collectors.\tN: %d; Elapsed time: %d ns;%n\t\t\t\t\t\tTotal profit: %d.%02d rub;%n",
+                n, finish - start, result / 100, Math.abs(result % 100)
+        );
+
+        start = System.nanoTime();
+        result = StatisticsCounter.countTotalProfitCustomCollector(purchases);
+        finish = System.nanoTime();
+        System.out.printf(
+                "Custom collector.\t\tN: %d; Elapsed time: %d ns;%n\t\t\t\t\t\tTotal profit: %d.%02d rub;%n",
+                n, finish - start, result / 100, Math.abs(result % 100)
+        );
     }
 }

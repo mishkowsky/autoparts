@@ -30,7 +30,8 @@ public record Buyer(String fullName, String phoneNumber, int personalDiscount) {
 
     @Override
     public boolean equals(Object obj) {
-
+        if (obj instanceof Buyer buyer)
+            return this.phoneNumber.equals(buyer.phoneNumber);
         return false;
     }
 }

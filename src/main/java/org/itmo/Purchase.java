@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Purchase {
 
-    enum PaymentMethod {
+    public enum PaymentMethod {
         CASH,
         CARD,
     }

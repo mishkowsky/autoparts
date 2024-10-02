@@ -4,7 +4,7 @@ import java.util.*;
 
 public record Product(int sellingPrice, int purchasePrice, String name, Category category, int discount) {
 
-    enum Category {
+    public enum Category {
         ENGINE,
         CAR_BODY,
         SUSPENSION,
