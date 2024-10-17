@@ -2,10 +2,10 @@ package org.itmo;
 
 import java.util.*;
 
-public record Buyer(String fullName, String phoneNumber, int personalDiscount) {
+public record Buyer(String fullName, String phoneNumber, int personalDiscount, long delay) {
 
     public static class BuyersGenerator {
-        public static List<Buyer> generateBuyers(int n) {
+        public static List<Buyer> generateBuyers(int n,long delay) {
             String[] fullNames = Database.getFullNames();
             List<Buyer> result = new ArrayList<>();
             List<Long> phoneNumbers = new ArrayList<>();
@@ -16,7 +16,7 @@ public record Buyer(String fullName, String phoneNumber, int personalDiscount) {
                 String fullName = fullNames[i % fullNames.length];
                 String phoneNumber = "+7" + phoneNumbers.get(i);
                 int personalDiscount = discounts[i % discounts.length];
-                Buyer b = new Buyer(fullName, phoneNumber, personalDiscount);
+                Buyer b = new Buyer(fullName, phoneNumber, personalDiscount, delay);
                 result.add(b);
             }
             return result;
@@ -24,14 +24,43 @@ public record Buyer(String fullName, String phoneNumber, int personalDiscount) {
     }
 
     @Override
-    public int hashCode() {
-        return phoneNumber.hashCode();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Buyer buyer)) return false;
+        return delay == buyer.delay && personalDiscount == buyer.personalDiscount
+                && fullName.equals(buyer.fullName) && phoneNumber.equals(buyer.phoneNumber);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Buyer buyer)
-            return this.phoneNumber.equals(buyer.phoneNumber);
-        return false;
+    public int hashCode() {
+        int result = fullName.hashCode();
+        result = 31 * result + phoneNumber.hashCode();
+        result = 31 * result + personalDiscount;
+        result = 31 * result + Long.hashCode(delay);
+        return result;
+    }
+
+    @Override
+    public String fullName() {
+        Delay.sleep(delay);
+        return fullName;
+    }
+
+    @Override
+    public String phoneNumber() {
+        Delay.sleep(delay);
+        return phoneNumber;
+    }
+
+    @Override
+    public int personalDiscount() {
+        Delay.sleep(delay);
+        return personalDiscount;
+    }
+
+    @Override
+    public long delay() {
+        Delay.sleep(delay);
+        return delay;
     }
 }

@@ -1,20 +1,7 @@
-package org.itmo;
+old:
 
-import org.javatuples.Pair;
+        //#endregion
 
-import java.util.List;
-
-public class Main {
-
-    static int EQUALS_STRING_LEN = 93;
-
-    public static void main(String[] args) {
-        System.out.println();
-        System.out.println("Counting complex statistics");
-        System.out.println();
-        measureTimeComplexStats(5000);
-        measureTimeComplexStats(50000);
-        measureTimeComplexStats(250000);
         //
         // Counting complex statistics
         //
@@ -67,12 +54,6 @@ public class Main {
         //						Most popular category: ENGINE (621764);
         //						Total profit: 9797805530.78 rub;
 
-        System.out.println();
-        System.out.println("Counting only total profit");
-        System.out.println();
-        measureTimeTotalProfit(5000);
-        measureTimeTotalProfit(50000);
-        measureTimeTotalProfit(250000);
         //
         // Counting only total profit
         //
@@ -97,74 +78,4 @@ public class Main {
         //						Total profit: 16326204462.67 rub;
         // Custom collector.	N: 250000; Elapsed time: 8106000 ns;
         //						Total profit: 16326204462.67 rub;
-    }
 
-    public static void measureTimeComplexStats(int n) {
-        System.out.println("=".repeat(EQUALS_STRING_LEN));
-        List<Product> products = Product.ProductGenerator.generateProducts();
-        List<Buyer> buyers = Buyer.BuyersGenerator.generateBuyers(100);
-        List<Purchase> purchases = Purchase.PurchaseGenerator.generatePurchases(n, products, buyers);
-        long start = System.nanoTime();
-        StatisticsCounter.Result result = StatisticsCounter.countForLoop(purchases);
-        long finish = System.nanoTime();
-        printReport(finish - start, result, n, "For Loop.\t\t\t");
-
-        start = System.nanoTime();
-        result = StatisticsCounter.countStandardCollectors(purchases);
-        finish = System.nanoTime();
-        printReport(finish - start, result, n, "Standard collectors.\t");
-
-        start = System.nanoTime();
-        result = StatisticsCounter.countCustomCollector(purchases);
-        finish = System.nanoTime();
-        printReport(finish - start, result, n, "Custom collector.\t\t");
-    }
-
-    public static void printReport(long time, StatisticsCounter.Result result, int n, String methodName) {
-        Pair<Buyer, Long> bestBuyer = result.getBestBuyer();
-        Pair<Product, Integer> mostPopularProduct = result.getMostPopularProduct();
-        Pair<Product.Category, Integer> mostPopularCategory = result.getMostPopularCategory();
-        System.out.printf(
-                "%sN: %d; Elapsed time: %d ns;%n" +
-                        "\t\t\t\t\t\tBest buyer: %s (%d.%02d rub);%n" +
-                        "\t\t\t\t\t\tMost popular product: %s (%d);%n" +
-                        "\t\t\t\t\t\tMost popular category: %s (%d);%n" +
-                        "\t\t\t\t\t\tTotal profit: %d.%02d rub;%n",
-                methodName, n, time,
-                bestBuyer.getValue0().fullName(), bestBuyer.getValue1() / 100, bestBuyer.getValue1() % 100,
-                mostPopularProduct.getValue0().name(), mostPopularProduct.getValue1(),
-                mostPopularCategory.getValue0(), mostPopularCategory.getValue1(),
-                result.totalProfit() / 100, Math.abs(result.totalProfit() % 100)
-        );
-    }
-
-    public static void measureTimeTotalProfit(int n) {
-        System.out.println("=".repeat(EQUALS_STRING_LEN));
-        List<Product> products = Product.ProductGenerator.generateProducts();
-        List<Buyer> buyers = Buyer.BuyersGenerator.generateBuyers(100);
-        List<Purchase> purchases = Purchase.PurchaseGenerator.generatePurchases(n, products, buyers);
-        long start = System.nanoTime();
-        long result = StatisticsCounter.countTotalProfitForLoop(purchases);
-        long finish = System.nanoTime();
-        System.out.printf(
-                "For Loop.\t\t\t\tN: %d; Elapsed time: %d ns;%n\t\t\t\t\t\tTotal profit: %d.%02d rub;%n",
-                n, finish - start, result / 100, Math.abs(result % 100)
-        );
-
-        start = System.nanoTime();
-        result = StatisticsCounter.countTotalProfitStandardCollector(purchases);
-        finish = System.nanoTime();
-        System.out.printf(
-                "Standard collectors.\tN: %d; Elapsed time: %d ns;%n\t\t\t\t\t\tTotal profit: %d.%02d rub;%n",
-                n, finish - start, result / 100, Math.abs(result % 100)
-        );
-
-        start = System.nanoTime();
-        result = StatisticsCounter.countTotalProfitCustomCollector(purchases);
-        finish = System.nanoTime();
-        System.out.printf(
-                "Custom collector.\t\tN: %d; Elapsed time: %d ns;%n\t\t\t\t\t\tTotal profit: %d.%02d rub;%n",
-                n, finish - start, result / 100, Math.abs(result % 100)
-        );
-    }
-}

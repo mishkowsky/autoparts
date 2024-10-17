@@ -1,0 +1,2534 @@
+C:\Users\aleks\.jdks\openjdk-23\bin\java.exe "-javaagent:C:\Users\aleks\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.2.1\lib\idea_rt.jar=1749:C:\Users\aleks\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.2.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\aleks\IdeaProjects\autoparts\target\classes;C:\Users\aleks\.m2\repository\org\openjdk\jmh\jmh-core\1.36\jmh-core-1.36.jar;C:\Users\aleks\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\aleks\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\aleks\.m2\repository\org\javatuples\javatuples\1.2\javatuples-1.2.jar org.itmo.StatisticCounterBenchmark
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 500)
+
+# Run progress: 0,00% complete, ETA 00:56:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 332,915 us/op
+# Warmup Iteration   2: 354,652 us/op
+# Warmup Iteration   3: 344,194 us/op
+Iteration   1: 324,043 us/op
+Iteration   2: 317,548 us/op
+Iteration   3: 330,363 us/op
+Iteration   4: 321,682 us/op
+Iteration   5: 312,832 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  321,293 �(99.9%) 25,513 us/op [Average]
+  (min, avg, max) = (312,832, 321,293, 330,363), stdev = 6,626
+  CI (99.9%): [295,781, 346,806] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 1000)
+
+# Run progress: 2,38% complete, ETA 00:55:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 705,892 us/op
+# Warmup Iteration   2: 637,029 us/op
+# Warmup Iteration   3: 605,920 us/op
+Iteration   1: 547,125 us/op
+Iteration   2: 532,138 us/op
+Iteration   3: 513,773 us/op
+Iteration   4: 539,328 us/op
+Iteration   5: 542,146 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  534,902 �(99.9%) 50,042 us/op [Average]
+  (min, avg, max) = (513,773, 534,902, 547,125), stdev = 12,996
+  CI (99.9%): [484,860, 584,944] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 1500)
+
+# Run progress: 4,76% complete, ETA 00:53:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 1020,118 us/op
+# Warmup Iteration   2: 901,644 us/op
+# Warmup Iteration   3: 723,196 us/op
+Iteration   1: 695,738 us/op
+Iteration   2: 762,583 us/op
+Iteration   3: 723,381 us/op
+Iteration   4: 719,993 us/op
+Iteration   5: 647,793 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  709,898 �(99.9%) 162,424 us/op [Average]
+  (min, avg, max) = (647,793, 709,898, 762,583), stdev = 42,181
+  CI (99.9%): [547,474, 872,321] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 2000)
+
+# Run progress: 7,14% complete, ETA 00:52:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 866,312 us/op
+# Warmup Iteration   2: 791,917 us/op
+# Warmup Iteration   3: 826,745 us/op
+Iteration   1: 845,221 us/op
+Iteration   2: 852,573 us/op
+Iteration   3: 858,746 us/op
+Iteration   4: 850,806 us/op
+Iteration   5: 870,301 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  855,529 �(99.9%) 36,827 us/op [Average]
+  (min, avg, max) = (845,221, 855,529, 870,301), stdev = 9,564
+  CI (99.9%): [818,702, 892,356] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 3000)
+
+# Run progress: 9,52% complete, ETA 00:51:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 1450,706 us/op
+# Warmup Iteration   2: 1282,041 us/op
+# Warmup Iteration   3: 1183,286 us/op
+Iteration   1: 1161,867 us/op
+Iteration   2: 1160,534 us/op
+Iteration   3: 1158,761 us/op
+Iteration   4: 1180,385 us/op
+Iteration   5: 1250,624 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  1182,434 �(99.9%) 150,583 us/op [Average]
+  (min, avg, max) = (1158,761, 1182,434, 1250,624), stdev = 39,106
+  CI (99.9%): [1031,851, 1333,017] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 4000)
+
+# Run progress: 11,90% complete, ETA 00:49:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 1719,121 us/op
+# Warmup Iteration   2: 1633,626 us/op
+# Warmup Iteration   3: 1647,566 us/op
+Iteration   1: 1608,894 us/op
+Iteration   2: 1544,260 us/op
+Iteration   3: 1529,992 us/op
+Iteration   4: 1503,984 us/op
+Iteration   5: 1499,365 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  1537,299 �(99.9%) 169,785 us/op [Average]
+  (min, avg, max) = (1499,365, 1537,299, 1608,894), stdev = 44,093
+  CI (99.9%): [1367,514, 1707,084] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 5000)
+
+# Run progress: 14,29% complete, ETA 00:48:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 1957,251 us/op
+# Warmup Iteration   2: 1932,927 us/op
+# Warmup Iteration   3: 1971,031 us/op
+Iteration   1: 1941,394 us/op
+Iteration   2: 1950,211 us/op
+Iteration   3: 1992,345 us/op
+Iteration   4: 1862,314 us/op
+Iteration   5: 1807,361 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  1910,725 �(99.9%) 286,797 us/op [Average]
+  (min, avg, max) = (1807,361, 1910,725, 1992,345), stdev = 74,480
+  CI (99.9%): [1623,928, 2197,522] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 500)
+
+# Run progress: 16,67% complete, ETA 00:47:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 389,178 us/op
+# Warmup Iteration   2: 325,802 us/op
+# Warmup Iteration   3: 312,321 us/op
+Iteration   1: 357,215 us/op
+Iteration   2: 376,952 us/op
+Iteration   3: 375,591 us/op
+Iteration   4: 361,306 us/op
+Iteration   5: 361,914 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  366,596 �(99.9%) 34,765 us/op [Average]
+  (min, avg, max) = (357,215, 366,596, 376,952), stdev = 9,028
+  CI (99.9%): [331,830, 401,361] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 1000)
+
+# Run progress: 19,05% complete, ETA 00:45:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 777,337 us/op
+# Warmup Iteration   2: 637,439 us/op
+# Warmup Iteration   3: 644,464 us/op
+Iteration   1: 615,286 us/op
+Iteration   2: 623,389 us/op
+Iteration   3: 654,826 us/op
+Iteration   4: 664,430 us/op
+Iteration   5: 672,292 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  646,045 �(99.9%) 97,480 us/op [Average]
+  (min, avg, max) = (615,286, 646,045, 672,292), stdev = 25,315
+  CI (99.9%): [548,565, 743,525] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 1500)
+
+# Run progress: 21,43% complete, ETA 00:44:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 1077,577 us/op
+# Warmup Iteration   2: 949,373 us/op
+# Warmup Iteration   3: 925,958 us/op
+Iteration   1: 887,506 us/op
+Iteration   2: 891,061 us/op
+Iteration   3: 900,960 us/op
+Iteration   4: 891,336 us/op
+Iteration   5: 887,603 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  891,693 �(99.9%) 21,149 us/op [Average]
+  (min, avg, max) = (887,506, 891,693, 900,960), stdev = 5,492
+  CI (99.9%): [870,544, 912,843] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 2000)
+
+# Run progress: 23,81% complete, ETA 00:42:58
+# Fork: 1 of 1
+# Warmup Iteration   1: 1211,977 us/op
+# Warmup Iteration   2: 1154,427 us/op
+# Warmup Iteration   3: 1123,839 us/op
+Iteration   1: 1105,993 us/op
+Iteration   2: 1097,679 us/op
+Iteration   3: 1054,899 us/op
+Iteration   4: 1062,376 us/op
+Iteration   5: 1071,632 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  1078,516 �(99.9%) 85,842 us/op [Average]
+  (min, avg, max) = (1054,899, 1078,516, 1105,993), stdev = 22,293
+  CI (99.9%): [992,674, 1164,358] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 3000)
+
+# Run progress: 26,19% complete, ETA 00:41:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 1709,719 us/op
+# Warmup Iteration   2: 1576,545 us/op
+# Warmup Iteration   3: 1573,503 us/op
+Iteration   1: 1584,673 us/op
+Iteration   2: 1575,603 us/op
+Iteration   3: 1541,170 us/op
+Iteration   4: 1520,877 us/op
+Iteration   5: 1512,540 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  1546,973 �(99.9%) 123,900 us/op [Average]
+  (min, avg, max) = (1512,540, 1546,973, 1584,673), stdev = 32,176
+  CI (99.9%): [1423,073, 1670,872] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 4000)
+
+# Run progress: 28,57% complete, ETA 00:40:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 2101,421 us/op
+# Warmup Iteration   2: 1966,287 us/op
+# Warmup Iteration   3: 1958,870 us/op
+Iteration   1: 1969,042 us/op
+Iteration   2: 1993,607 us/op
+Iteration   3: 2551,674 us/op
+Iteration   4: 2001,920 us/op
+Iteration   5: 1959,279 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  2095,105 �(99.9%) 985,083 us/op [Average]
+  (min, avg, max) = (1959,279, 2095,105, 2551,674), stdev = 255,823
+  CI (99.9%): [1110,022, 3080,187] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 5000)
+
+# Run progress: 30,95% complete, ETA 00:38:57
+# Fork: 1 of 1
+# Warmup Iteration   1: 2629,352 us/op
+# Warmup Iteration   2: 2428,259 us/op
+# Warmup Iteration   3: 2370,148 us/op
+Iteration   1: 2334,484 us/op
+Iteration   2: 2356,550 us/op
+Iteration   3: 2414,614 us/op
+Iteration   4: 2322,337 us/op
+Iteration   5: 2316,964 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  2348,990 �(99.9%) 152,940 us/op [Average]
+  (min, avg, max) = (2316,964, 2348,990, 2414,614), stdev = 39,718
+  CI (99.9%): [2196,049, 2501,930] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 500)
+
+# Run progress: 33,33% complete, ETA 00:37:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 929,764 us/op
+# Warmup Iteration   2: 857,295 us/op
+# Warmup Iteration   3: 857,808 us/op
+Iteration   1: 925,250 us/op
+Iteration   2: 886,008 us/op
+Iteration   3: 888,016 us/op
+Iteration   4: 858,765 us/op
+Iteration   5: 865,018 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  884,612 �(99.9%) 100,356 us/op [Average]
+  (min, avg, max) = (858,765, 884,612, 925,250), stdev = 26,062
+  CI (99.9%): [784,256, 984,967] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 1000)
+
+# Run progress: 35,71% complete, ETA 00:36:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 1903,469 us/op
+# Warmup Iteration   2: 1807,313 us/op
+# Warmup Iteration   3: 1716,609 us/op
+Iteration   1: 1695,865 us/op
+Iteration   2: 1744,117 us/op
+Iteration   3: 1804,134 us/op
+Iteration   4: 1803,344 us/op
+Iteration   5: 1812,002 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  1771,892 �(99.9%) 194,344 us/op [Average]
+  (min, avg, max) = (1695,865, 1771,892, 1812,002), stdev = 50,471
+  CI (99.9%): [1577,548, 1966,237] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 1500)
+
+# Run progress: 38,10% complete, ETA 00:34:55
+# Fork: 1 of 1
+# Warmup Iteration   1: 2828,795 us/op
+# Warmup Iteration   2: 2797,214 us/op
+# Warmup Iteration   3: 2625,998 us/op
+Iteration   1: 2508,730 us/op
+Iteration   2: 2564,127 us/op
+Iteration   3: 2626,901 us/op
+Iteration   4: 2666,334 us/op
+Iteration   5: 2745,036 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  2622,226 �(99.9%) 351,372 us/op [Average]
+  (min, avg, max) = (2508,730, 2622,226, 2745,036), stdev = 91,250
+  CI (99.9%): [2270,853, 2973,598] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 2000)
+
+# Run progress: 40,48% complete, ETA 00:33:34
+# Fork: 1 of 1
+# Warmup Iteration   1: 3807,968 us/op
+# Warmup Iteration   2: 3595,746 us/op
+# Warmup Iteration   3: 3615,673 us/op
+Iteration   1: 3625,197 us/op
+Iteration   2: 3581,953 us/op
+Iteration   3: 3500,127 us/op
+Iteration   4: 4153,971 us/op
+Iteration   5: 3602,974 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  3692,844 �(99.9%) 1009,147 us/op [Average]
+  (min, avg, max) = (3500,127, 3692,844, 4153,971), stdev = 262,072
+  CI (99.9%): [2683,697, 4701,992] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 3000)
+
+# Run progress: 42,86% complete, ETA 00:32:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 5924,022 us/op
+# Warmup Iteration   2: 5839,498 us/op
+# Warmup Iteration   3: 5561,247 us/op
+Iteration   1: 5275,698 us/op
+Iteration   2: 5364,346 us/op
+Iteration   3: 5442,441 us/op
+Iteration   4: 5484,113 us/op
+Iteration   5: 5582,492 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  5429,818 �(99.9%) 449,290 us/op [Average]
+  (min, avg, max) = (5275,698, 5429,818, 5582,492), stdev = 116,679
+  CI (99.9%): [4980,527, 5879,108] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 4000)
+
+# Run progress: 45,24% complete, ETA 00:30:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 8085,912 us/op
+# Warmup Iteration   2: 7483,740 us/op
+# Warmup Iteration   3: 7246,597 us/op
+Iteration   1: 6925,552 us/op
+Iteration   2: 6973,668 us/op
+Iteration   3: 7121,340 us/op
+Iteration   4: 7271,764 us/op
+Iteration   5: 7283,623 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  7115,189 �(99.9%) 635,397 us/op [Average]
+  (min, avg, max) = (6925,552, 7115,189, 7283,623), stdev = 165,010
+  CI (99.9%): [6479,793, 7750,586] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 5000)
+
+# Run progress: 47,62% complete, ETA 00:29:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 9924,229 us/op
+# Warmup Iteration   2: 9882,865 us/op
+# Warmup Iteration   3: 9251,627 us/op
+Iteration   1: 8954,606 us/op
+Iteration   2: 9013,476 us/op
+Iteration   3: 8914,821 us/op
+Iteration   4: 8978,644 us/op
+Iteration   5: 9262,312 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  9024,772 �(99.9%) 529,702 us/op [Average]
+  (min, avg, max) = (8914,821, 9024,772, 9262,312), stdev = 137,562
+  CI (99.9%): [8495,070, 9554,474] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 500)
+
+# Run progress: 50,00% complete, ETA 00:28:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 1283,461 us/op
+# Warmup Iteration   2: 1206,628 us/op
+# Warmup Iteration   3: 1191,997 us/op
+Iteration   1: 1190,693 us/op
+Iteration   2: 1180,531 us/op
+Iteration   3: 1196,159 us/op
+Iteration   4: 1181,788 us/op
+Iteration   5: 1187,918 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  1187,418 �(99.9%) 24,844 us/op [Average]
+  (min, avg, max) = (1180,531, 1187,418, 1196,159), stdev = 6,452
+  CI (99.9%): [1162,574, 1212,262] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 1000)
+
+# Run progress: 52,38% complete, ETA 00:26:51
+# Fork: 1 of 1
+# Warmup Iteration   1: 2538,842 us/op
+# Warmup Iteration   2: 2434,898 us/op
+# Warmup Iteration   3: 2422,826 us/op
+Iteration   1: 2436,513 us/op
+Iteration   2: 2419,813 us/op
+Iteration   3: 2417,065 us/op
+Iteration   4: 2418,469 us/op
+Iteration   5: 2416,111 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  2421,594 �(99.9%) 32,565 us/op [Average]
+  (min, avg, max) = (2416,111, 2421,594, 2436,513), stdev = 8,457
+  CI (99.9%): [2389,030, 2454,159] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 1500)
+
+# Run progress: 54,76% complete, ETA 00:25:31
+# Fork: 1 of 1
+# Warmup Iteration   1: 3864,831 us/op
+# Warmup Iteration   2: 3684,627 us/op
+# Warmup Iteration   3: 3677,386 us/op
+Iteration   1: 3673,839 us/op
+Iteration   2: 3693,525 us/op
+Iteration   3: 3680,879 us/op
+Iteration   4: 3666,463 us/op
+Iteration   5: 4163,940 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  3775,729 �(99.9%) 836,535 us/op [Average]
+  (min, avg, max) = (3666,463, 3775,729, 4163,940), stdev = 217,246
+  CI (99.9%): [2939,194, 4612,265] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 2000)
+
+# Run progress: 57,14% complete, ETA 00:24:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 5739,990 us/op
+# Warmup Iteration   2: 5551,549 us/op
+# Warmup Iteration   3: 5665,390 us/op
+Iteration   1: 5650,804 us/op
+Iteration   2: 5575,856 us/op
+Iteration   3: 5398,500 us/op
+Iteration   4: 5433,222 us/op
+Iteration   5: 5403,575 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  5492,392 �(99.9%) 440,162 us/op [Average]
+  (min, avg, max) = (5398,500, 5492,392, 5650,804), stdev = 114,309
+  CI (99.9%): [5052,230, 5932,554] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 3000)
+
+# Run progress: 59,52% complete, ETA 00:22:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 8714,873 us/op
+# Warmup Iteration   2: 8569,373 us/op
+# Warmup Iteration   3: 8486,349 us/op
+Iteration   1: 8662,292 us/op
+Iteration   2: 8796,439 us/op
+Iteration   3: 8675,627 us/op
+Iteration   4: 8567,527 us/op
+Iteration   5: 8430,311 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  8626,439 �(99.9%) 525,658 us/op [Average]
+  (min, avg, max) = (8430,311, 8626,439, 8796,439), stdev = 136,512
+  CI (99.9%): [8100,781, 9152,098] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 4000)
+
+# Run progress: 61,90% complete, ETA 00:21:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 11718,206 us/op
+# Warmup Iteration   2: 11409,497 us/op
+# Warmup Iteration   3: 11381,444 us/op
+Iteration   1: 11387,949 us/op
+Iteration   2: 11476,846 us/op
+Iteration   3: 11606,975 us/op
+Iteration   4: 11551,458 us/op
+Iteration   5: 11344,219 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  11473,489 �(99.9%) 421,540 us/op [Average]
+  (min, avg, max) = (11344,219, 11473,489, 11606,975), stdev = 109,472
+  CI (99.9%): [11051,950, 11895,029] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 5000)
+
+# Run progress: 64,29% complete, ETA 00:20:08
+# Fork: 1 of 1
+# Warmup Iteration   1: 14593,238 us/op
+# Warmup Iteration   2: 14417,031 us/op
+# Warmup Iteration   3: 15786,724 us/op
+Iteration   1: 15542,621 us/op
+Iteration   2: 15252,001 us/op
+Iteration   3: 14712,993 us/op
+Iteration   4: 14771,218 us/op
+Iteration   5: 14682,595 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  14992,286 �(99.9%) 1482,753 us/op [Average]
+  (min, avg, max) = (14682,595, 14992,286, 15542,621), stdev = 385,066
+  CI (99.9%): [13509,533, 16475,039] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 500)
+
+# Run progress: 66,67% complete, ETA 00:18:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 704,441 us/op
+# Warmup Iteration   2: 609,097 us/op
+# Warmup Iteration   3: 581,576 us/op
+Iteration   1: 561,590 us/op
+Iteration   2: 564,746 us/op
+Iteration   3: 571,884 us/op
+Iteration   4: 560,881 us/op
+Iteration   5: 557,316 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  563,284 �(99.9%) 21,122 us/op [Average]
+  (min, avg, max) = (557,316, 563,284, 571,884), stdev = 5,485
+  CI (99.9%): [542,162, 584,406] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 1000)
+
+# Run progress: 69,05% complete, ETA 00:17:27
+# Fork: 1 of 1
+# Warmup Iteration   1: 1224,806 us/op
+# Warmup Iteration   2: 1065,724 us/op
+# Warmup Iteration   3: 1068,037 us/op
+Iteration   1: 1067,063 us/op
+Iteration   2: 1045,974 us/op
+Iteration   3: 1054,427 us/op
+Iteration   4: 1188,001 us/op
+Iteration   5: 1208,777 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  1112,848 �(99.9%) 303,394 us/op [Average]
+  (min, avg, max) = (1045,974, 1112,848, 1208,777), stdev = 78,791
+  CI (99.9%): [809,454, 1416,242] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 1500)
+
+# Run progress: 71,43% complete, ETA 00:16:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 1816,198 us/op
+# Warmup Iteration   2: 1411,429 us/op
+# Warmup Iteration   3: 1378,758 us/op
+Iteration   1: 1404,905 us/op
+Iteration   2: 1373,820 us/op
+Iteration   3: 1372,713 us/op
+Iteration   4: 1358,636 us/op
+Iteration   5: 1342,205 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  1370,456 �(99.9%) 89,087 us/op [Average]
+  (min, avg, max) = (1342,205, 1370,456, 1404,905), stdev = 23,136
+  CI (99.9%): [1281,369, 1459,543] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 2000)
+
+# Run progress: 73,81% complete, ETA 00:14:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 1816,235 us/op
+# Warmup Iteration   2: 1648,729 us/op
+# Warmup Iteration   3: 1679,010 us/op
+Iteration   1: 1521,824 us/op
+Iteration   2: 1533,955 us/op
+Iteration   3: 1537,128 us/op
+Iteration   4: 1530,136 us/op
+Iteration   5: 1557,786 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  1536,166 �(99.9%) 51,492 us/op [Average]
+  (min, avg, max) = (1521,824, 1536,166, 1557,786), stdev = 13,372
+  CI (99.9%): [1484,674, 1587,657] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 3000)
+
+# Run progress: 76,19% complete, ETA 00:13:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 2325,052 us/op
+# Warmup Iteration   2: 1957,403 us/op
+# Warmup Iteration   3: 2009,378 us/op
+Iteration   1: 1957,220 us/op
+Iteration   2: 1957,289 us/op
+Iteration   3: 1949,639 us/op
+Iteration   4: 2209,851 us/op
+Iteration   5: 2163,712 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  2047,542 �(99.9%) 493,605 us/op [Average]
+  (min, avg, max) = (1949,639, 2047,542, 2209,851), stdev = 128,188
+  CI (99.9%): [1553,937, 2541,147] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 4000)
+
+# Run progress: 78,57% complete, ETA 00:12:05
+# Fork: 1 of 1
+# Warmup Iteration   1: 2830,101 us/op
+# Warmup Iteration   2: 2460,523 us/op
+# Warmup Iteration   3: 2475,420 us/op
+Iteration   1: 2439,403 us/op
+Iteration   2: 2434,806 us/op
+Iteration   3: 2456,419 us/op
+Iteration   4: 2636,753 us/op
+Iteration   5: 2750,394 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  2543,555 �(99.9%) 550,437 us/op [Average]
+  (min, avg, max) = (2434,806, 2543,555, 2750,394), stdev = 142,947
+  CI (99.9%): [1993,118, 3093,992] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 5000)
+
+# Run progress: 80,95% complete, ETA 00:10:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 3508,070 us/op
+# Warmup Iteration   2: 3035,918 us/op
+# Warmup Iteration   3: 2963,697 us/op
+Iteration   1: 2907,215 us/op
+Iteration   2: 2884,455 us/op
+Iteration   3: 2862,855 us/op
+Iteration   4: 2856,642 us/op
+Iteration   5: 2876,310 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  2877,496 �(99.9%) 76,586 us/op [Average]
+  (min, avg, max) = (2856,642, 2877,496, 2907,215), stdev = 19,889
+  CI (99.9%): [2800,910, 2954,081] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 500)
+
+# Run progress: 83,33% complete, ETA 00:09:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 836,498 us/op
+# Warmup Iteration   2: 701,306 us/op
+# Warmup Iteration   3: 697,317 us/op
+Iteration   1: 698,893 us/op
+Iteration   2: 672,690 us/op
+Iteration   3: 643,602 us/op
+Iteration   4: 651,249 us/op
+Iteration   5: 671,170 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  667,521 �(99.9%) 83,059 us/op [Average]
+  (min, avg, max) = (643,602, 667,521, 698,893), stdev = 21,570
+  CI (99.9%): [584,462, 750,580] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 1000)
+
+# Run progress: 85,71% complete, ETA 00:08:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 1354,431 us/op
+# Warmup Iteration   2: 1204,130 us/op
+# Warmup Iteration   3: 1182,675 us/op
+Iteration   1: 1164,664 us/op
+Iteration   2: 1162,067 us/op
+Iteration   3: 1368,793 us/op
+Iteration   4: 1164,307 us/op
+Iteration   5: 1124,562 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  1196,879 �(99.9%) 375,783 us/op [Average]
+  (min, avg, max) = (1124,562, 1196,879, 1368,793), stdev = 97,590
+  CI (99.9%): [821,096, 1572,661] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 1500)
+
+# Run progress: 88,10% complete, ETA 00:06:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 1846,724 us/op
+# Warmup Iteration   2: 1591,229 us/op
+# Warmup Iteration   3: 1602,368 us/op
+Iteration   1: 1527,688 us/op
+Iteration   2: 1483,641 us/op
+Iteration   3: 1498,246 us/op
+Iteration   4: 1468,043 us/op
+Iteration   5: 1470,906 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  1489,705 �(99.9%) 93,830 us/op [Average]
+  (min, avg, max) = (1468,043, 1489,705, 1527,688), stdev = 24,367
+  CI (99.9%): [1395,875, 1583,535] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 2000)
+
+# Run progress: 90,48% complete, ETA 00:05:22
+# Fork: 1 of 1
+# Warmup Iteration   1: 2069,349 us/op
+# Warmup Iteration   2: 1891,668 us/op
+# Warmup Iteration   3: 1918,083 us/op
+Iteration   1: 1747,183 us/op
+Iteration   2: 1720,510 us/op
+Iteration   3: 1718,246 us/op
+Iteration   4: 1732,536 us/op
+Iteration   5: 1733,103 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  1730,316 �(99.9%) 44,701 us/op [Average]
+  (min, avg, max) = (1718,246, 1730,316, 1747,183), stdev = 11,609
+  CI (99.9%): [1685,615, 1775,016] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 3000)
+
+# Run progress: 92,86% complete, ETA 00:04:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 2917,399 us/op
+# Warmup Iteration   2: 2528,744 us/op
+# Warmup Iteration   3: 2419,379 us/op
+Iteration   1: 2363,746 us/op
+Iteration   2: 2365,702 us/op
+Iteration   3: 2319,166 us/op
+Iteration   4: 2443,237 us/op
+Iteration   5: 2345,520 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  2367,474 �(99.9%) 178,264 us/op [Average]
+  (min, avg, max) = (2319,166, 2367,474, 2443,237), stdev = 46,294
+  CI (99.9%): [2189,211, 2545,738] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 4000)
+
+# Run progress: 95,24% complete, ETA 00:02:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 3504,166 us/op
+# Warmup Iteration   2: 3077,494 us/op
+# Warmup Iteration   3: 3311,561 us/op
+Iteration   1: 3262,445 us/op
+Iteration   2: 3100,024 us/op
+Iteration   3: 2876,753 us/op
+Iteration   4: 2978,090 us/op
+Iteration   5: 3040,521 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  3051,566 �(99.9%) 554,340 us/op [Average]
+  (min, avg, max) = (2876,753, 3051,566, 3262,445), stdev = 143,960
+  CI (99.9%): [2497,226, 3605,907] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 5000)
+
+# Run progress: 97,62% complete, ETA 00:01:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 4253,056 us/op
+# Warmup Iteration   2: 4081,616 us/op
+# Warmup Iteration   3: 3544,424 us/op
+Iteration   1: 3643,639 us/op
+Iteration   2: 3716,065 us/op
+Iteration   3: 3920,832 us/op
+Iteration   4: 4222,482 us/op
+Iteration   5: 4075,603 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  3915,724 �(99.9%) 930,513 us/op [Average]
+  (min, avg, max) = (3643,639, 3915,724, 4222,482), stdev = 241,651
+  CI (99.9%): [2985,211, 4846,238] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:56:25
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                   (delay)   (n)  Mode  Cnt      Score      Error  Units
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0   500  avgt    5    321,293 �   25,513  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  1000  avgt    5    534,902 �   50,042  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  1500  avgt    5    709,898 �  162,424  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  2000  avgt    5    855,529 �   36,827  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  3000  avgt    5   1182,434 �  150,583  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  4000  avgt    5   1537,299 �  169,785  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  5000  avgt    5   1910,725 �  286,797  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5   500  avgt    5    366,596 �   34,765  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  1000  avgt    5    646,045 �   97,480  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  1500  avgt    5    891,693 �   21,149  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  2000  avgt    5   1078,516 �   85,842  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  3000  avgt    5   1546,973 �  123,900  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  4000  avgt    5   2095,105 �  985,083  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  5000  avgt    5   2348,990 �  152,940  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0   500  avgt    5    884,612 �  100,356  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  1000  avgt    5   1771,892 �  194,344  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  1500  avgt    5   2622,226 �  351,372  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  2000  avgt    5   3692,844 � 1009,147  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  3000  avgt    5   5429,818 �  449,290  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  4000  avgt    5   7115,189 �  635,397  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  5000  avgt    5   9024,772 �  529,702  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5   500  avgt    5   1187,418 �   24,844  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  1000  avgt    5   2421,594 �   32,565  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  1500  avgt    5   3775,729 �  836,535  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  2000  avgt    5   5492,392 �  440,162  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  3000  avgt    5   8626,439 �  525,658  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  4000  avgt    5  11473,489 �  421,540  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  5000  avgt    5  14992,286 � 1482,753  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0   500  avgt    5    563,284 �   21,122  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  1000  avgt    5   1112,848 �  303,394  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  1500  avgt    5   1370,456 �   89,087  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  2000  avgt    5   1536,166 �   51,492  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  3000  avgt    5   2047,542 �  493,605  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  4000  avgt    5   2543,555 �  550,437  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  5000  avgt    5   2877,496 �   76,586  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5   500  avgt    5    667,521 �   83,059  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  1000  avgt    5   1196,879 �  375,783  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  1500  avgt    5   1489,705 �   93,830  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  2000  avgt    5   1730,316 �   44,701  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  3000  avgt    5   2367,474 �  178,264  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  4000  avgt    5   3051,566 �  554,340  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  5000  avgt    5   3915,724 �  930,513  us/op
+
+Process finished with exit code 0
+
+
+C:\Users\aleks\.jdks\openjdk-23\bin\java.exe "-javaagent:C:\Users\aleks\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.2.1\lib\idea_rt.jar=13566:C:\Users\aleks\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2024.2.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\aleks\IdeaProjects\autoparts\target\classes;C:\Users\aleks\.m2\repository\org\openjdk\jmh\jmh-core\1.36\jmh-core-1.36.jar;C:\Users\aleks\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\aleks\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;C:\Users\aleks\.m2\repository\org\javatuples\javatuples\1.2\javatuples-1.2.jar org.itmo.StatisticCounterBenchmark
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 50)
+
+# Run progress: 0,00% complete, ETA 00:48:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 95,877 us/op
+# Warmup Iteration   2: 70,693 us/op
+# Warmup Iteration   3: 87,846 us/op
+Iteration   1: 84,001 us/op
+Iteration   2: 70,764 us/op
+Iteration   3: 68,349 us/op
+Iteration   4: 84,758 us/op
+Iteration   5: 78,669 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  77,308 �(99.9%) 28,895 us/op [Average]
+  (min, avg, max) = (68,349, 77,308, 84,758), stdev = 7,504
+  CI (99.9%): [48,413, 106,203] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 100)
+
+# Run progress: 2,78% complete, ETA 00:46:59
+# Fork: 1 of 1
+# Warmup Iteration   1: 121,632 us/op
+# Warmup Iteration   2: 96,543 us/op
+# Warmup Iteration   3: 99,218 us/op
+Iteration   1: 99,436 us/op
+Iteration   2: 100,190 us/op
+Iteration   3: 108,377 us/op
+Iteration   4: 117,641 us/op
+Iteration   5: 115,744 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  108,277 �(99.9%) 32,618 us/op [Average]
+  (min, avg, max) = (99,436, 108,277, 117,641), stdev = 8,471
+  CI (99.9%): [75,659, 140,896] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 150)
+
+# Run progress: 5,56% complete, ETA 00:45:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 179,615 us/op
+# Warmup Iteration   2: 146,146 us/op
+# Warmup Iteration   3: 139,152 us/op
+Iteration   1: 131,529 us/op
+Iteration   2: 131,896 us/op
+Iteration   3: 133,981 us/op
+Iteration   4: 132,272 us/op
+Iteration   5: 130,487 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  132,033 �(99.9%) 4,914 us/op [Average]
+  (min, avg, max) = (130,487, 132,033, 133,981), stdev = 1,276
+  CI (99.9%): [127,119, 136,947] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 200)
+
+# Run progress: 8,33% complete, ETA 00:44:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 190,119 us/op
+# Warmup Iteration   2: 156,458 us/op
+# Warmup Iteration   3: 147,502 us/op
+Iteration   1: 147,223 us/op
+Iteration   2: 148,253 us/op
+Iteration   3: 150,840 us/op
+Iteration   4: 148,202 us/op
+Iteration   5: 148,339 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  148,572 �(99.9%) 5,186 us/op [Average]
+  (min, avg, max) = (147,223, 148,572, 150,840), stdev = 1,347
+  CI (99.9%): [143,386, 153,757] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 300)
+
+# Run progress: 11,11% complete, ETA 00:42:56
+# Fork: 1 of 1
+# Warmup Iteration   1: 252,295 us/op
+# Warmup Iteration   2: 216,006 us/op
+# Warmup Iteration   3: 201,766 us/op
+Iteration   1: 198,294 us/op
+Iteration   2: 194,173 us/op
+Iteration   3: 198,369 us/op
+Iteration   4: 203,791 us/op
+Iteration   5: 202,538 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  199,433 �(99.9%) 14,755 us/op [Average]
+  (min, avg, max) = (194,173, 199,433, 203,791), stdev = 3,832
+  CI (99.9%): [184,678, 214,188] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 0, n = 400)
+
+# Run progress: 13,89% complete, ETA 00:41:35
+# Fork: 1 of 1
+# Warmup Iteration   1: 276,270 us/op
+# Warmup Iteration   2: 259,447 us/op
+# Warmup Iteration   3: 253,393 us/op
+Iteration   1: 250,953 us/op
+Iteration   2: 246,728 us/op
+Iteration   3: 253,865 us/op
+Iteration   4: 255,062 us/op
+Iteration   5: 251,048 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  251,531 �(99.9%) 12,411 us/op [Average]
+  (min, avg, max) = (246,728, 251,531, 255,062), stdev = 3,223
+  CI (99.9%): [239,120, 263,942] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 50)
+
+# Run progress: 16,67% complete, ETA 00:40:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 104,018 us/op
+# Warmup Iteration   2: 87,562 us/op
+# Warmup Iteration   3: 81,850 us/op
+Iteration   1: 78,826 us/op
+Iteration   2: 82,494 us/op
+Iteration   3: 86,922 us/op
+Iteration   4: 88,396 us/op
+Iteration   5: 85,819 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  84,491 �(99.9%) 14,789 us/op [Average]
+  (min, avg, max) = (78,826, 84,491, 88,396), stdev = 3,841
+  CI (99.9%): [69,703, 99,280] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 100)
+
+# Run progress: 19,44% complete, ETA 00:38:54
+# Fork: 1 of 1
+# Warmup Iteration   1: 158,980 us/op
+# Warmup Iteration   2: 139,305 us/op
+# Warmup Iteration   3: 145,678 us/op
+Iteration   1: 130,794 us/op
+Iteration   2: 128,272 us/op
+Iteration   3: 132,571 us/op
+Iteration   4: 137,725 us/op
+Iteration   5: 138,500 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  133,572 �(99.9%) 17,042 us/op [Average]
+  (min, avg, max) = (128,272, 133,572, 138,500), stdev = 4,426
+  CI (99.9%): [116,531, 150,614] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 150)
+
+# Run progress: 22,22% complete, ETA 00:37:34
+# Fork: 1 of 1
+# Warmup Iteration   1: 193,529 us/op
+# Warmup Iteration   2: 162,207 us/op
+# Warmup Iteration   3: 150,682 us/op
+Iteration   1: 150,419 us/op
+Iteration   2: 149,565 us/op
+Iteration   3: 148,059 us/op
+Iteration   4: 151,466 us/op
+Iteration   5: 148,358 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  149,573 �(99.9%) 5,469 us/op [Average]
+  (min, avg, max) = (148,059, 149,573, 151,466), stdev = 1,420
+  CI (99.9%): [144,105, 155,042] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 200)
+
+# Run progress: 25,00% complete, ETA 00:36:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 215,904 us/op
+# Warmup Iteration   2: 186,919 us/op
+# Warmup Iteration   3: 183,161 us/op
+Iteration   1: 177,597 us/op
+Iteration   2: 172,698 us/op
+Iteration   3: 174,028 us/op
+Iteration   4: 189,574 us/op
+Iteration   5: 197,858 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  182,351 �(99.9%) 42,081 us/op [Average]
+  (min, avg, max) = (172,698, 182,351, 197,858), stdev = 10,928
+  CI (99.9%): [140,270, 224,432] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 300)
+
+# Run progress: 27,78% complete, ETA 00:34:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 287,421 us/op
+# Warmup Iteration   2: 266,070 us/op
+# Warmup Iteration   3: 245,468 us/op
+Iteration   1: 239,472 us/op
+Iteration   2: 247,701 us/op
+Iteration   3: 241,584 us/op
+Iteration   4: 257,209 us/op
+Iteration   5: 261,738 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  249,541 �(99.9%) 37,316 us/op [Average]
+  (min, avg, max) = (239,472, 249,541, 261,738), stdev = 9,691
+  CI (99.9%): [212,225, 286,856] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin
+# Parameters: (delay = 5, n = 400)
+
+# Run progress: 30,56% complete, ETA 00:33:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 368,393 us/op
+# Warmup Iteration   2: 320,532 us/op
+# Warmup Iteration   3: 324,297 us/op
+Iteration   1: 321,021 us/op
+Iteration   2: 315,396 us/op
+Iteration   3: 301,382 us/op
+Iteration   4: 319,997 us/op
+Iteration   5: 325,647 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countCustomCollectorWithForkJoin":
+  316,689 �(99.9%) 35,810 us/op [Average]
+  (min, avg, max) = (301,382, 316,689, 325,647), stdev = 9,300
+  CI (99.9%): [280,879, 352,498] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 50)
+
+# Run progress: 33,33% complete, ETA 00:32:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 110,852 us/op
+# Warmup Iteration   2: 98,576 us/op
+# Warmup Iteration   3: 97,806 us/op
+Iteration   1: 96,334 us/op
+Iteration   2: 98,880 us/op
+Iteration   3: 99,008 us/op
+Iteration   4: 96,380 us/op
+Iteration   5: 96,437 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  97,408 �(99.9%) 5,405 us/op [Average]
+  (min, avg, max) = (96,334, 97,408, 99,008), stdev = 1,404
+  CI (99.9%): [92,002, 102,813] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 100)
+
+# Run progress: 36,11% complete, ETA 00:30:51
+# Fork: 1 of 1
+# Warmup Iteration   1: 217,362 us/op
+# Warmup Iteration   2: 215,361 us/op
+# Warmup Iteration   3: 206,749 us/op
+Iteration   1: 204,923 us/op
+Iteration   2: 197,247 us/op
+Iteration   3: 206,492 us/op
+Iteration   4: 203,905 us/op
+Iteration   5: 208,233 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  204,160 �(99.9%) 16,161 us/op [Average]
+  (min, avg, max) = (197,247, 204,160, 208,233), stdev = 4,197
+  CI (99.9%): [187,999, 220,321] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 150)
+
+# Run progress: 38,89% complete, ETA 00:29:31
+# Fork: 1 of 1
+# Warmup Iteration   1: 271,615 us/op
+# Warmup Iteration   2: 263,187 us/op
+# Warmup Iteration   3: 262,882 us/op
+Iteration   1: 260,865 us/op
+Iteration   2: 261,577 us/op
+Iteration   3: 259,869 us/op
+Iteration   4: 261,269 us/op
+Iteration   5: 259,199 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  260,556 �(99.9%) 3,830 us/op [Average]
+  (min, avg, max) = (259,199, 260,556, 261,577), stdev = 0,995
+  CI (99.9%): [256,726, 264,386] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 200)
+
+# Run progress: 41,67% complete, ETA 00:28:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 358,673 us/op
+# Warmup Iteration   2: 341,720 us/op
+# Warmup Iteration   3: 336,162 us/op
+Iteration   1: 339,950 us/op
+Iteration   2: 334,304 us/op
+Iteration   3: 336,683 us/op
+Iteration   4: 336,852 us/op
+Iteration   5: 338,790 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  337,316 �(99.9%) 8,348 us/op [Average]
+  (min, avg, max) = (334,304, 337,316, 339,950), stdev = 2,168
+  CI (99.9%): [328,968, 345,664] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 300)
+
+# Run progress: 44,44% complete, ETA 00:26:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 543,233 us/op
+# Warmup Iteration   2: 524,108 us/op
+# Warmup Iteration   3: 515,941 us/op
+Iteration   1: 557,650 us/op
+Iteration   2: 522,671 us/op
+Iteration   3: 514,702 us/op
+Iteration   4: 505,450 us/op
+Iteration   5: 504,027 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  520,900 �(99.9%) 84,266 us/op [Average]
+  (min, avg, max) = (504,027, 520,900, 557,650), stdev = 21,884
+  CI (99.9%): [436,634, 605,166] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 0, n = 400)
+
+# Run progress: 47,22% complete, ETA 00:25:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 724,683 us/op
+# Warmup Iteration   2: 693,363 us/op
+# Warmup Iteration   3: 690,906 us/op
+Iteration   1: 683,036 us/op
+Iteration   2: 682,210 us/op
+Iteration   3: 686,992 us/op
+Iteration   4: 683,331 us/op
+Iteration   5: 677,492 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  682,612 �(99.9%) 13,095 us/op [Average]
+  (min, avg, max) = (677,492, 682,612, 686,992), stdev = 3,401
+  CI (99.9%): [669,517, 695,708] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 50)
+
+# Run progress: 50,00% complete, ETA 00:24:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 145,026 us/op
+# Warmup Iteration   2: 132,690 us/op
+# Warmup Iteration   3: 129,823 us/op
+Iteration   1: 129,209 us/op
+Iteration   2: 128,319 us/op
+Iteration   3: 128,384 us/op
+Iteration   4: 130,437 us/op
+Iteration   5: 131,315 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  129,533 �(99.9%) 5,054 us/op [Average]
+  (min, avg, max) = (128,319, 129,533, 131,315), stdev = 1,312
+  CI (99.9%): [124,479, 134,586] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 100)
+
+# Run progress: 52,78% complete, ETA 00:22:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 259,633 us/op
+# Warmup Iteration   2: 250,812 us/op
+# Warmup Iteration   3: 247,624 us/op
+Iteration   1: 247,103 us/op
+Iteration   2: 247,517 us/op
+Iteration   3: 247,168 us/op
+Iteration   4: 247,808 us/op
+Iteration   5: 247,566 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  247,432 �(99.9%) 1,130 us/op [Average]
+  (min, avg, max) = (247,103, 247,432, 247,808), stdev = 0,294
+  CI (99.9%): [246,302, 248,562] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 150)
+
+# Run progress: 55,56% complete, ETA 00:21:27
+# Fork: 1 of 1
+# Warmup Iteration   1: 373,009 us/op
+# Warmup Iteration   2: 360,216 us/op
+# Warmup Iteration   3: 357,297 us/op
+Iteration   1: 355,976 us/op
+Iteration   2: 355,397 us/op
+Iteration   3: 358,418 us/op
+Iteration   4: 358,899 us/op
+Iteration   5: 356,081 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  356,954 �(99.9%) 6,110 us/op [Average]
+  (min, avg, max) = (355,397, 356,954, 358,899), stdev = 1,587
+  CI (99.9%): [350,845, 363,064] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 200)
+
+# Run progress: 58,33% complete, ETA 00:20:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 493,849 us/op
+# Warmup Iteration   2: 473,517 us/op
+# Warmup Iteration   3: 523,893 us/op
+Iteration   1: 469,957 us/op
+Iteration   2: 467,484 us/op
+Iteration   3: 467,682 us/op
+Iteration   4: 469,634 us/op
+Iteration   5: 469,912 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  468,934 �(99.9%) 4,780 us/op [Average]
+  (min, avg, max) = (467,484, 468,934, 469,957), stdev = 1,241
+  CI (99.9%): [464,154, 473,714] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 300)
+
+# Run progress: 61,11% complete, ETA 00:18:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 739,064 us/op
+# Warmup Iteration   2: 728,178 us/op
+# Warmup Iteration   3: 712,486 us/op
+Iteration   1: 706,458 us/op
+Iteration   2: 700,491 us/op
+Iteration   3: 701,338 us/op
+Iteration   4: 704,179 us/op
+Iteration   5: 720,001 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  706,493 �(99.9%) 30,468 us/op [Average]
+  (min, avg, max) = (700,491, 706,493, 720,001), stdev = 7,912
+  CI (99.9%): [676,025, 736,962] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectors
+# Parameters: (delay = 5, n = 400)
+
+# Run progress: 63,89% complete, ETA 00:17:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 988,237 us/op
+# Warmup Iteration   2: 952,937 us/op
+# Warmup Iteration   3: 946,800 us/op
+Iteration   1: 945,583 us/op
+Iteration   2: 938,573 us/op
+Iteration   3: 937,975 us/op
+Iteration   4: 936,177 us/op
+Iteration   5: 951,666 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectors":
+  941,995 �(99.9%) 24,964 us/op [Average]
+  (min, avg, max) = (936,177, 941,995, 951,666), stdev = 6,483
+  CI (99.9%): [917,031, 966,959] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 50)
+
+# Run progress: 66,67% complete, ETA 00:16:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 251,392 us/op
+# Warmup Iteration   2: 227,555 us/op
+# Warmup Iteration   3: 230,361 us/op
+Iteration   1: 214,386 us/op
+Iteration   2: 217,073 us/op
+Iteration   3: 195,153 us/op
+Iteration   4: 192,708 us/op
+Iteration   5: 186,436 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  201,151 �(99.9%) 52,813 us/op [Average]
+  (min, avg, max) = (186,436, 201,151, 217,073), stdev = 13,715
+  CI (99.9%): [148,338, 253,965] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 100)
+
+# Run progress: 69,44% complete, ETA 00:14:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 282,931 us/op
+# Warmup Iteration   2: 253,684 us/op
+# Warmup Iteration   3: 257,675 us/op
+Iteration   1: 257,330 us/op
+Iteration   2: 241,116 us/op
+Iteration   3: 231,339 us/op
+Iteration   4: 234,128 us/op
+Iteration   5: 238,939 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  240,570 �(99.9%) 39,012 us/op [Average]
+  (min, avg, max) = (231,339, 240,570, 257,330), stdev = 10,131
+  CI (99.9%): [201,559, 279,582] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 150)
+
+# Run progress: 72,22% complete, ETA 00:13:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 340,040 us/op
+# Warmup Iteration   2: 355,421 us/op
+# Warmup Iteration   3: 347,763 us/op
+Iteration   1: 309,957 us/op
+Iteration   2: 303,865 us/op
+Iteration   3: 287,121 us/op
+Iteration   4: 283,607 us/op
+Iteration   5: 280,708 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  293,051 �(99.9%) 50,185 us/op [Average]
+  (min, avg, max) = (280,708, 293,051, 309,957), stdev = 13,033
+  CI (99.9%): [242,866, 343,237] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 200)
+
+# Run progress: 75,00% complete, ETA 00:12:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 363,975 us/op
+# Warmup Iteration   2: 317,894 us/op
+# Warmup Iteration   3: 305,765 us/op
+Iteration   1: 305,945 us/op
+Iteration   2: 307,445 us/op
+Iteration   3: 304,892 us/op
+Iteration   4: 305,605 us/op
+Iteration   5: 307,116 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  306,201 �(99.9%) 4,093 us/op [Average]
+  (min, avg, max) = (304,892, 306,201, 307,445), stdev = 1,063
+  CI (99.9%): [302,107, 310,294] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 300)
+
+# Run progress: 77,78% complete, ETA 00:10:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 523,880 us/op
+# Warmup Iteration   2: 468,143 us/op
+# Warmup Iteration   3: 447,745 us/op
+Iteration   1: 430,178 us/op
+Iteration   2: 403,965 us/op
+Iteration   3: 388,559 us/op
+Iteration   4: 386,996 us/op
+Iteration   5: 385,167 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  398,973 �(99.9%) 73,091 us/op [Average]
+  (min, avg, max) = (385,167, 398,973, 430,178), stdev = 18,981
+  CI (99.9%): [325,882, 472,064] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 0, n = 400)
+
+# Run progress: 80,56% complete, ETA 00:09:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 596,509 us/op
+# Warmup Iteration   2: 563,728 us/op
+# Warmup Iteration   3: 549,226 us/op
+Iteration   1: 542,569 us/op
+Iteration   2: 534,776 us/op
+Iteration   3: 536,347 us/op
+Iteration   4: 537,920 us/op
+Iteration   5: 526,225 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  535,567 �(99.9%) 23,029 us/op [Average]
+  (min, avg, max) = (526,225, 535,567, 542,569), stdev = 5,981
+  CI (99.9%): [512,538, 558,596] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 50)
+
+# Run progress: 83,33% complete, ETA 00:08:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 256,771 us/op
+# Warmup Iteration   2: 232,415 us/op
+# Warmup Iteration   3: 220,868 us/op
+Iteration   1: 214,151 us/op
+Iteration   2: 226,460 us/op
+Iteration   3: 178,739 us/op
+Iteration   4: 181,773 us/op
+Iteration   5: 180,013 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  196,227 �(99.9%) 86,382 us/op [Average]
+  (min, avg, max) = (178,739, 196,227, 226,460), stdev = 22,433
+  CI (99.9%): [109,845, 282,609] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 100)
+
+# Run progress: 86,11% complete, ETA 00:06:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 299,300 us/op
+# Warmup Iteration   2: 256,927 us/op
+# Warmup Iteration   3: 254,992 us/op
+Iteration   1: 280,883 us/op
+Iteration   2: 270,600 us/op
+Iteration   3: 276,836 us/op
+Iteration   4: 275,220 us/op
+Iteration   5: 308,567 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  282,421 �(99.9%) 58,041 us/op [Average]
+  (min, avg, max) = (270,600, 282,421, 308,567), stdev = 15,073
+  CI (99.9%): [224,380, 340,462] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 150)
+
+# Run progress: 88,89% complete, ETA 00:05:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 425,128 us/op
+# Warmup Iteration   2: 381,473 us/op
+# Warmup Iteration   3: 378,317 us/op
+Iteration   1: 372,773 us/op
+Iteration   2: 375,980 us/op
+Iteration   3: 379,887 us/op
+Iteration   4: 358,504 us/op
+Iteration   5: 337,821 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  364,993 �(99.9%) 66,236 us/op [Average]
+  (min, avg, max) = (337,821, 364,993, 379,887), stdev = 17,201
+  CI (99.9%): [298,757, 431,229] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 200)
+
+# Run progress: 91,67% complete, ETA 00:04:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 417,440 us/op
+# Warmup Iteration   2: 367,160 us/op
+# Warmup Iteration   3: 349,051 us/op
+Iteration   1: 346,302 us/op
+Iteration   2: 349,296 us/op
+Iteration   3: 391,237 us/op
+Iteration   4: 395,100 us/op
+Iteration   5: 381,499 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  372,687 �(99.9%) 89,634 us/op [Average]
+  (min, avg, max) = (346,302, 372,687, 395,100), stdev = 23,278
+  CI (99.9%): [283,053, 462,321] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 300)
+
+# Run progress: 94,44% complete, ETA 00:02:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 596,286 us/op
+# Warmup Iteration   2: 531,834 us/op
+# Warmup Iteration   3: 521,977 us/op
+Iteration   1: 513,858 us/op
+Iteration   2: 510,726 us/op
+Iteration   3: 513,121 us/op
+Iteration   4: 521,732 us/op
+Iteration   5: 507,824 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  513,452 �(99.9%) 20,002 us/op [Average]
+  (min, avg, max) = (507,824, 513,452, 521,732), stdev = 5,195
+  CI (99.9%): [493,450, 533,454] (assumes normal distribution)
+
+
+# JMH version: 1.36
+# VM version: JDK 23, OpenJDK 64-Bit Server VM, 23+37-2369
+# VM invoker: C:\Users\aleks\.jdks\openjdk-23\bin\java.exe
+# VM options: -Xms2G -Xmx2G
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 5 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel
+# Parameters: (delay = 5, n = 400)
+
+# Run progress: 97,22% complete, ETA 00:01:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 777,546 us/op
+# Warmup Iteration   2: 690,732 us/op
+# Warmup Iteration   3: 672,055 us/op
+Iteration   1: 659,673 us/op
+Iteration   2: 665,948 us/op
+Iteration   3: 668,303 us/op
+Iteration   4: 694,459 us/op
+Iteration   5: 699,494 us/op
+
+
+Result "org.itmo.StatisticCounterBenchmark.countStandardCollectorsParallel":
+  677,576 �(99.9%) 69,609 us/op [Average]
+  (min, avg, max) = (659,673, 677,576, 699,494), stdev = 18,077
+  CI (99.9%): [607,966, 747,185] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:48:17
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                   (delay)  (n)  Mode  Cnt    Score    Error  Units
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0   50  avgt    5   77,308 � 28,895  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  100  avgt    5  108,277 � 32,618  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  150  avgt    5  132,033 �  4,914  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  200  avgt    5  148,572 �  5,186  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  300  avgt    5  199,433 � 14,755  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        0  400  avgt    5  251,531 � 12,411  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5   50  avgt    5   84,491 � 14,789  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  100  avgt    5  133,572 � 17,042  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  150  avgt    5  149,573 �  5,469  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  200  avgt    5  182,351 � 42,081  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  300  avgt    5  249,541 � 37,316  us/op
+StatisticCounterBenchmark.countCustomCollectorWithForkJoin        5  400  avgt    5  316,689 � 35,810  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0   50  avgt    5   97,408 �  5,405  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  100  avgt    5  204,160 � 16,161  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  150  avgt    5  260,556 �  3,830  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  200  avgt    5  337,316 �  8,348  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  300  avgt    5  520,900 � 84,266  us/op
+StatisticCounterBenchmark.countStandardCollectors                 0  400  avgt    5  682,612 � 13,095  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5   50  avgt    5  129,533 �  5,054  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  100  avgt    5  247,432 �  1,130  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  150  avgt    5  356,954 �  6,110  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  200  avgt    5  468,934 �  4,780  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  300  avgt    5  706,493 � 30,468  us/op
+StatisticCounterBenchmark.countStandardCollectors                 5  400  avgt    5  941,995 � 24,964  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0   50  avgt    5  201,151 � 52,813  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  100  avgt    5  240,570 � 39,012  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  150  avgt    5  293,051 � 50,185  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  200  avgt    5  306,201 �  4,093  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  300  avgt    5  398,973 � 73,091  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         0  400  avgt    5  535,567 � 23,029  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5   50  avgt    5  196,227 � 86,382  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  100  avgt    5  282,421 � 58,041  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  150  avgt    5  364,993 � 66,236  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  200  avgt    5  372,687 � 89,634  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  300  avgt    5  513,452 � 20,002  us/op
+StatisticCounterBenchmark.countStandardCollectorsParallel         5  400  avgt    5  677,576 � 69,609  us/op
+
+Process finished with exit code 0

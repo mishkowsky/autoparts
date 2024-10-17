@@ -1,6 +1,7 @@
 package org.itmo;
 
 import java.util.*;
+import java.util.concurrent.*;
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
@@ -42,9 +43,25 @@ public class StatisticsCounter {
                     result = new Pair<>(entry.getKey(), entry.getValue());
             return result;
         }
+
+        public int hashCode() {
+            return (int) (this.totalSpendPerBuyer.hashCode() + this.totalSellCountPerProduct.hashCode() +
+                    this.totalSellCountPerCategory.hashCode() + this.totalProfit);
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof Result result)) return false;
+
+            return totalProfit == result.totalProfit
+                    && totalSpendPerBuyer.equals(result.totalSpendPerBuyer)
+                    && totalSellCountPerProduct.equals(result.totalSellCountPerProduct)
+                    && totalSellCountPerCategory.equals(result.totalSellCountPerCategory);
+        }
     }
 
-    public static Result countForLoop(List<Purchase> purchases) {
+    public static StatisticsCounter.Result countForLoop(List<Purchase> purchases) {
 
         Map<Buyer, Long> totalSpendPerBuyer = new HashMap<>();
         Map<Product, Integer> totalSoldPerProduct = new HashMap<>();
@@ -52,21 +69,23 @@ public class StatisticsCounter {
         long totalProfit = 0;
 
         for (Purchase purchase : purchases) {
-            totalSpendPerBuyer.put(
-                    purchase.getBuyer(),
-                    totalSpendPerBuyer.getOrDefault(purchase.getBuyer(), 0L) + purchase.getTotalPrice());
+            long pervTotalSpendPerBuyer = totalSpendPerBuyer.getOrDefault(purchase.getBuyer(), 0L);
+            totalSpendPerBuyer.put(purchase.getBuyer(), pervTotalSpendPerBuyer + purchase.getTotalPrice());
 
+            long totalPurchaseCost = 0;
             for (Product product : purchase.getProducts().keySet()) {
-                totalSoldPerProduct.put(
-                        product, totalSoldPerProduct.getOrDefault(product, 0) + 1);
-                totalSoldPerCategory.put(
-                        product.category(), totalSoldPerCategory.getOrDefault(product.category(), 0) + 1);
+                int soldCount = purchase.getProducts().get(product);
+                totalPurchaseCost += product.purchasePrice() * (long) soldCount;
+
+                int prevTotalSoldPerProduct = totalSoldPerProduct.getOrDefault(product, 0);
+                totalSoldPerProduct.put(product, prevTotalSoldPerProduct + soldCount);
+
+                int prevTotalSoldPerCategory = totalSoldPerCategory.getOrDefault(product.category(), 0);
+                totalSoldPerCategory.put(product.category(), prevTotalSoldPerCategory + soldCount);
             }
-
-            totalProfit += purchase.getTotalPrice();
+            totalProfit += purchase.getTotalPrice() - totalPurchaseCost;
         }
-
-        return new Result(totalSpendPerBuyer, totalSoldPerProduct, totalSoldPerCategory, totalProfit);
+        return new StatisticsCounter.Result(totalSpendPerBuyer, totalSoldPerProduct, totalSoldPerCategory, totalProfit);
     }
 
     public static Result countStandardCollectors(List<Purchase> purchases) {
@@ -81,7 +100,7 @@ public class StatisticsCounter {
                 purchase -> purchase.getProducts().entrySet().stream(),
                 Collectors.toMap(
                         Map.Entry::getKey,
-                        e -> 1,
+                        Map.Entry::getValue,
                         Integer::sum
                 )
         );
@@ -91,12 +110,15 @@ public class StatisticsCounter {
                 purchase -> purchase.getProducts().entrySet().stream(),
                 Collectors.toMap(
                         m -> m.getKey().category(),
-                        e -> 1,
+                        Map.Entry::getValue,
                         Integer::sum
                 )
         );
 
-        Collector<Purchase, ?, Long> totalProfitCollector = Collectors.summingLong(Purchase::getTotalPrice);
+        Collector<Purchase, ?, Long> totalProfitCollector =
+                Collectors.summingLong(
+                        p -> p.getTotalPrice() - p.getProducts().entrySet().stream().mapToLong(
+                                e -> (long) e.getKey().purchasePrice() * e.getValue()).sum());
 
         Map<Buyer, Long> totalSpendPerBuyer = purchases.stream().collect(totalSpendPerBuyerCollector);
         Map<Product, Integer> totalSellCountPerProduct = purchases.stream().collect(totalSellCountPerProductCollector);
@@ -104,7 +126,110 @@ public class StatisticsCounter {
                 purchases.stream().collect(totalSellCountPerCategoryCollector);
         long totalProfit = purchases.stream().collect(totalProfitCollector);
 
-        return new Result(totalSpendPerBuyer, totalSellCountPerProduct, totalSellCountPerCategory, totalProfit);
+        return new StatisticsCounter.Result(
+                totalSpendPerBuyer, totalSellCountPerProduct, totalSellCountPerCategory, totalProfit);
+    }
+
+    public static Result countStandardCollectorsParallel(List<Purchase> purchases) {
+
+        Collector<Purchase, ?, ConcurrentMap<Buyer, Long>>
+                totalSpendPerBuyerCollector =
+                Collectors.toConcurrentMap(
+                        Purchase::getBuyer,
+                        Purchase::getTotalPrice,
+                        Long::sum);
+
+        Collector<Purchase, ?, ConcurrentMap<Product, Integer>>
+                totalSellCountPerProductCollector =
+                Collectors.flatMapping(
+                        purchase -> purchase.getProducts().entrySet().stream(),
+                        Collectors.toConcurrentMap(
+                                Map.Entry::getKey,
+                                Map.Entry::getValue,
+                                Integer::sum
+                        )
+                );
+
+        Collector<Purchase, ?, ConcurrentMap<Product.Category, Integer>>
+                totalSellCountPerCategoryCollector = Collectors.flatMapping(
+                purchase -> purchase.getProducts().entrySet().stream(),
+                Collectors.toConcurrentMap(
+                        m -> m.getKey().category(),
+                        Map.Entry::getValue,
+                        Integer::sum
+                )
+        );
+
+        Collector<Purchase, ?, Long> totalProfitCollector =
+                Collectors.summingLong(
+                        p -> p.getTotalPrice() - p.getProducts().entrySet().stream().mapToLong(
+                                e -> (long) e.getKey().purchasePrice() * e.getValue()).sum());
+
+        ConcurrentMap<Buyer, Long>
+                totalSpendPerBuyer = purchases.parallelStream().collect(totalSpendPerBuyerCollector);
+        ConcurrentMap<Product, Integer>
+                totalSellCountPerProduct = purchases.parallelStream().collect(totalSellCountPerProductCollector);
+        ConcurrentMap<Product.Category, Integer>
+                totalSellCountPerCategory =
+                purchases.parallelStream().collect(totalSellCountPerCategoryCollector);
+        long totalProfit = purchases.parallelStream().collect(totalProfitCollector);
+
+        return new StatisticsCounter.Result(totalSpendPerBuyer, totalSellCountPerProduct,
+                totalSellCountPerCategory, totalProfit);
+    }
+
+    public static class MyRecursiveTask extends RecursiveTask<Result> {
+
+        private final List<Purchase> purchases;
+
+        public MyRecursiveTask(List<Purchase> purchases) {
+            this.purchases = purchases;
+        }
+
+        @Override
+        protected Result compute() {
+            //if work is above threshold, break tasks up into smaller tasks
+            if (this.purchases.size() > 16) {
+
+                int subLen = this.purchases.size() / 2;
+
+                MyRecursiveTask subtask1 = new MyRecursiveTask(this.purchases.subList(0, subLen));
+                MyRecursiveTask subtask2 = new MyRecursiveTask(this.purchases.subList(subLen, this.purchases.size()));
+
+                subtask1.fork();
+                subtask2.fork();
+
+                Result result1 = subtask1.join();
+                Result result2 = subtask2.join();
+
+                for (Map.Entry<Buyer, Long> e : result2.totalSpendPerBuyer.entrySet()) {
+                    Long prevValue = result1.totalSpendPerBuyer.getOrDefault(e.getKey(), 0L);
+                    result1.totalSpendPerBuyer.put(e.getKey(), prevValue + e.getValue());
+                }
+
+                for (Map.Entry<Product, Integer> e : result2.totalSellCountPerProduct.entrySet()) {
+                    Integer prevValue = result1.totalSellCountPerProduct.getOrDefault(e.getKey(), 0);
+                    result1.totalSellCountPerProduct.put(e.getKey(), prevValue + e.getValue());
+                }
+
+                for (Map.Entry<Product.Category, Integer> e : result2.totalSellCountPerCategory.entrySet()) {
+                    Integer prevValue = result1.totalSellCountPerCategory.getOrDefault(e.getKey(), 0);
+                    result1.totalSellCountPerCategory.put(e.getKey(), prevValue + e.getValue());
+                }
+
+                return new Result(result1.totalSpendPerBuyer,
+                        result1.totalSellCountPerProduct, result1.totalSellCountPerCategory,
+                        result1.totalProfit + result2.totalProfit);
+            } else {
+                return StatisticsCounter.countForLoop(purchases);
+            }
+        }
+    }
+
+    public static Result countForkJoin(List<Purchase> purchases) {
+        ForkJoinPool forkJoinPool = ForkJoinPool.commonPool();
+        MyRecursiveTask myRecursiveAction = new MyRecursiveTask(purchases);
+        return forkJoinPool.invoke(myRecursiveAction);
     }
 
     public static Result countCustomCollector(List<Purchase> purchases) {
@@ -137,19 +262,26 @@ public class StatisticsCounter {
         accumulator() {
             return (quartet, purchase) -> {
                 Map<Buyer, Long> sumPerBuyer = quartet.getValue0();
-                sumPerBuyer.put(purchase.getBuyer(),
-                        sumPerBuyer.getOrDefault(purchase.getBuyer(), 0L) + purchase.getTotalPrice());
+                long prevSumPerBuyer = sumPerBuyer.getOrDefault(purchase.getBuyer(), 0L);
+                sumPerBuyer.put(purchase.getBuyer(), prevSumPerBuyer + purchase.getTotalPrice());
 
-                Map<Product, Integer> counterPerProduct = quartet.getValue1();
+                Map<Product, Integer> countPerProduct = quartet.getValue1();
                 Map<Product.Category, Integer> counterPerCategory = quartet.getValue2();
 
-                for (Product product : purchase.getProducts().keySet()) {
-                    counterPerProduct.put(product, counterPerProduct.getOrDefault(product, 0) + 1);
+                for (Map.Entry<Product, Integer> e : purchase.getProducts().entrySet()) {
+                    Product product = e.getKey();
                     Product.Category category = product.category();
-                    counterPerCategory.put(category, counterPerCategory.getOrDefault(category, 0) + 1);
+
+                    int sellCount = e.getValue();
+                    int prevProductCount = countPerProduct.getOrDefault(product, 0);
+                    countPerProduct.put(product, prevProductCount + sellCount);
+
+                    int prevCategoryCount = counterPerCategory.getOrDefault(category, 0);
+                    counterPerCategory.put(category, prevCategoryCount + sellCount);
                 }
                 long sum = quartet.getValue3().getValue();
-                sum += purchase.getTotalPrice();
+                sum += purchase.getTotalPrice() - purchase.getProducts().entrySet().stream()
+                        .mapToLong(e -> (long) e.getKey().purchasePrice() * e.getValue()).sum();
                 quartet.getValue3().setValue(sum);
             };
         }
@@ -205,7 +337,6 @@ public class StatisticsCounter {
             Collector<Purchase, Utils.LongWrapper, Utils.LongWrapper> {
         @Override
         public Supplier<Utils.LongWrapper> supplier() {
-
             return () -> new Utils.LongWrapper(0L);
         }
 

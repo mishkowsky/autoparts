@@ -3,13 +3,9 @@ package org.itmo;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-
 public class Purchase {
 
-    public enum PaymentMethod {
-        CASH,
-        CARD,
-    }
+    public enum PaymentMethod { CASH, CARD, }
 
     private final Date purchaseDate;
     private final PaymentMethod paymentMethod;
@@ -19,40 +15,71 @@ public class Purchase {
     private final Buyer buyer;
     private final Map<Product, Integer> products = new HashMap<>();
 
+    private final long delay;
     private final static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
 
     public Purchase(Date purchaseDate, PaymentMethod paymentMethod, int totalPrice,
-                    String shopAddress, Map<Product, Integer> products, Buyer buyer) {
+                    String shopAddress, Map<Product, Integer> products, Buyer buyer, long delay) {
+
         this.purchaseDate = purchaseDate;
         this.paymentMethod = paymentMethod;
         this.totalPrice = totalPrice;
         this.shopAddress = shopAddress;
         this.buyer = buyer;
+        this.delay = delay;
         this.products.putAll(products);
     }
 
     public Date getPurchaseTime() {
+        Delay.sleep(delay);
         return purchaseDate;
     }
 
     public PaymentMethod getPaymentMethod() {
+        Delay.sleep(delay);
         return paymentMethod;
     }
 
     public long getTotalPrice() {
+        Delay.sleep(delay);
         return totalPrice;
     }
 
     public String getShopAddress() {
+        Delay.sleep(delay);
         return shopAddress;
     }
 
     public Map<Product, Integer> getProducts() {
+        Delay.sleep(delay);
         return products;
     }
 
     public Buyer getBuyer() {
+        Delay.sleep(delay);
         return buyer;
+    }
+
+    @Override
+    public final boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Purchase purchase)) return false;
+        return getTotalPrice() == purchase.getTotalPrice() && delay == purchase.delay
+                && purchaseDate.equals(purchase.purchaseDate) && getPaymentMethod() == purchase.getPaymentMethod()
+                && getShopAddress().equals(purchase.getShopAddress()) && getBuyer().equals(purchase.getBuyer())
+                && getProducts().equals(purchase.getProducts());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = purchaseDate.hashCode();
+        result = 31 * result + getPaymentMethod().hashCode();
+        result = 31 * result + Long.hashCode(getTotalPrice());
+        result = 31 * result + getShopAddress().hashCode();
+        result = 31 * result + getBuyer().hashCode();
+        result = 31 * result + getProducts().hashCode();
+        result = 31 * result + Long.hashCode(delay);
+        return result;
     }
 
     @Override
@@ -64,13 +91,16 @@ public class Purchase {
 
     public static class PurchaseGenerator {
 
+
         private final static int MAX_UNIQUE_ITEMS_IN_PURCHASE = 25;
         private final static int MAX_COUNT_PER_PRODUCT = 25;
 
         private final static Random random = new Random();
 
         public static List<Purchase> generatePurchases(
-                int n, List<Product> products, List<Buyer> buyers, Calendar startPeriodDate, Calendar endPeriodDate) {
+                int n, long delay, List<Product> products, List<Buyer> buyers,
+                Calendar startPeriodDate,
+                Calendar endPeriodDate) {
 
             String[] shopAddresses = Database.getShopAddresses();
 
@@ -98,7 +128,7 @@ public class Purchase {
 
                 Purchase purchase = new Purchase(
                         purchaseDate, pm, totalPurchasePrice,
-                        shopAddresses[i % shopAddresses.length], productsMap, buyer);
+                        shopAddresses[i % shopAddresses.length], productsMap, buyer, delay);
 
                 result.add(purchase);
             }
@@ -106,11 +136,11 @@ public class Purchase {
         }
 
         public static List<Purchase> generatePurchases(
-                int n, List<Product> products, List<Buyer> buyers) {
+                int n, long delay, List<Product> products, List<Buyer> buyers) {
             Calendar startPeriodDate = Calendar.getInstance();
             Calendar endPeriodDate = Calendar.getInstance();
             endPeriodDate.add(Calendar.MONTH, 1);
-            return generatePurchases(n, products, buyers, startPeriodDate, endPeriodDate);
+            return generatePurchases(n, delay, products, buyers, startPeriodDate, endPeriodDate);
         }
     }
 }
