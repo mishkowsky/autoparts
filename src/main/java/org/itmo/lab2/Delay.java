@@ -1,4 +1,4 @@
-package org.itmo;
+package org.itmo.lab2;
 
 public class Delay {
     // 1000000000 наносек (ns) = 1000000 микросек (us) = 1000 миллисек = 1 сек

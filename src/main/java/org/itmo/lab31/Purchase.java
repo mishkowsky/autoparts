@@ -1,4 +1,4 @@
-package org.itmo;
+package org.itmo.lab31;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -30,10 +30,10 @@ public class Purchase {
         this.products.putAll(products);
     }
 
-    public Date getPurchaseTime() {
-        Delay.sleep(delay);
-        return purchaseDate;
-    }
+//    public Date getPurchaseTime() {
+//        Delay.sleep(delay);
+//        return purchaseDate;
+//    }
 
     public PaymentMethod getPaymentMethod() {
         Delay.sleep(delay);
@@ -41,12 +41,12 @@ public class Purchase {
     }
 
     public long getTotalPrice() {
-        Delay.sleep(delay);
+//        Delay.sleep(delay);
         return totalPrice;
     }
 
     public String getShopAddress() {
-        Delay.sleep(delay);
+//        Delay.sleep(delay);
         return shopAddress;
     }
 
@@ -119,9 +119,9 @@ public class Purchase {
                 for (int j = 0; j < uniqueProductsCount; j++) {
                     Product p = products.get(j);
                     int count = random.nextInt(1, MAX_COUNT_PER_PRODUCT);
-                    int productsCount = p.sellingPrice() * (100 - p.discount() - buyer.personalDiscount()) * count;
-                    totalPurchasePrice += productsCount;
-                    productsMap.put(p, productsCount);
+                    int productsPrice = (p.sellingPrice() * (100 - p.discount() - buyer.personalDiscount()) * count) / 100;
+                    totalPurchasePrice += productsPrice;
+                    productsMap.put(p, count);
                 }
 
                 Date purchaseDate = Utils.between(startPeriodDate.getTime(), endPeriodDate.getTime());

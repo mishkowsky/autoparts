@@ -1,4 +1,4 @@
-package org.itmo;
+package org.itmo.lab1;
 
 import org.javatuples.Pair;
 
@@ -101,9 +101,9 @@ public class Lab1 {
 
     public static void measureTimeComplexStats(int n) {
         System.out.println("=".repeat(EQUALS_STRING_LEN));
-        List<Product> products = Product.ProductGenerator.generateProducts(0);
-        List<Buyer> buyers = Buyer.BuyersGenerator.generateBuyers(100, 0);
-        List<Purchase> purchases = Purchase.PurchaseGenerator.generatePurchases(n, 0, products, buyers);
+        List<Product> products = Product.ProductGenerator.generateProducts();
+        List<Buyer> buyers = Buyer.BuyersGenerator.generateBuyers(100);
+        List<Purchase> purchases = Purchase.PurchaseGenerator.generatePurchases(n, products, buyers);
         long start = System.nanoTime();
         StatisticsCounter.Result result = StatisticsCounter.countForLoop(purchases);
         long finish = System.nanoTime();
@@ -140,9 +140,9 @@ public class Lab1 {
 
     public static void measureTimeTotalProfit(int n) {
         System.out.println("=".repeat(EQUALS_STRING_LEN));
-        List<Product> products = Product.ProductGenerator.generateProducts(0);
-        List<Buyer> buyers = Buyer.BuyersGenerator.generateBuyers(100, 0);
-        List<Purchase> purchases = Purchase.PurchaseGenerator.generatePurchases(n, 0, products, buyers);
+        List<Product> products = Product.ProductGenerator.generateProducts();
+        List<Buyer> buyers = Buyer.BuyersGenerator.generateBuyers(100);
+        List<Purchase> purchases = Purchase.PurchaseGenerator.generatePurchases(n, products, buyers);
         long start = System.nanoTime();
         long result = StatisticsCounter.countTotalProfitForLoop(purchases);
         long finish = System.nanoTime();

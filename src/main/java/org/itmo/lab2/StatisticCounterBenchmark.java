@@ -1,9 +1,5 @@
-package org.itmo;
+package org.itmo.lab2;
 
-import org.itmo.lab2.Buyer;
-import org.itmo.lab2.Product;
-import org.itmo.lab2.Purchase;
-import org.itmo.lab2.StatisticsCounter;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 import org.openjdk.jmh.runner.Runner;
@@ -25,7 +21,7 @@ public class StatisticCounterBenchmark {
     @Param({"0", "5"}) // delay in ns (1000000000 наносек (ns) = 1000000 микросек (us) = 1000 миллисек = 1 сек)
     private long delay = 0;
 
-    @Param({"10", "30", "50", "75", "100", "300", "500", "750", "1000"})//, "100000"})//, "250000", "500000"})
+    @Param({"10", "30", "50", "75", "100", "300", "500", "750", "1000"})
     private int n = 10;
 
     private List<Purchase> purchases;
@@ -33,8 +29,8 @@ public class StatisticCounterBenchmark {
     @Setup(Level.Iteration)
     public void setupPurchases() {
         purchases = Purchase.PurchaseGenerator.generatePurchases(n, delay,
-                    Product.ProductGenerator.generateProducts(delay),
-                    Buyer.BuyersGenerator.generateBuyers(100, delay));
+                Product.ProductGenerator.generateProducts(delay),
+                Buyer.BuyersGenerator.generateBuyers(100, delay));
     }
 
     public static void main(String[] args) throws RunnerException {

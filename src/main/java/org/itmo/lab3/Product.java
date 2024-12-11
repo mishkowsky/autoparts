@@ -1,6 +1,9 @@
-package org.itmo;
+package org.itmo.lab3;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 public record Product(int sellingPrice, int purchasePrice, String name, Category category, int discount, long delay) {
 
@@ -94,7 +97,7 @@ public record Product(int sellingPrice, int purchasePrice, String name, Category
                 for (String name : namesInCategory) {
                     int sellingPrice = random.nextInt(MINIMAL_SELLING_PRICE, MAXIMUM_SELLING_PRICE);
                     int markup = random.nextInt(10, 35);
-                    int purchasePrice = sellingPrice * (100 - markup); // цена закупки
+                    int purchasePrice = sellingPrice * (100 - markup) / 100; // цена закупки
                     int discount = random.nextInt(5, markup); // discount <= markup, so no loss
                     Product p = new Product(sellingPrice, purchasePrice, name, category, discount, delay);
                     result.add(p);

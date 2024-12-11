@@ -1,4 +1,4 @@
-package org.itmo;
+package org.itmo.lab31;
 
 import java.util.HashMap;
 import java.util.Map;
