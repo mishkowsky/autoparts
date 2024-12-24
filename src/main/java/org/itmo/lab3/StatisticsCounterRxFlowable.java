@@ -58,10 +58,10 @@ public class StatisticsCounterRxFlowable {
         }
 
         public void onComplete() {
-//            System.out.println("\n" +
-//                    "===============Done===============\n" +
-//                    "Processed " + this.processedElementsCount + " element\n" +
-//                    "Average delay: " + this.averageDelay);
+            System.out.println("\n" +
+                    "===============Done===============\n" +
+                    "Processed " + this.processedElementsCount + " element\n" +
+                    "Average delay: " + this.averageDelay);
         }
     }
 
@@ -73,16 +73,11 @@ public class StatisticsCounterRxFlowable {
 
         Observable.fromIterable(purchases)
                 .toFlowable(BackpressureStrategy.BUFFER)
-//                .zipWith(
-//                        Flowable.interval(1, TimeUnit.NANOSECONDS),
-//                        (item, _) -> item
-//                )
                 .subscribeOn(Schedulers.computation())
                 .blockingSubscribe(s);
 
-        // assert result == StatisticsCounter.countForLoop(purchases);
-//        System.out.println("Best buyer from RX: " + result.getBestBuyer());
-//        System.out.println("Best buyer from ForLoop" + StatisticsCounter.countForLoop(purchases).getBestBuyer());
+        System.out.println("Best buyer from RX: " + result.getBestBuyer());
+        System.out.println("Best buyer from ForLoop" + StatisticsCounter.countForLoop(purchases).getBestBuyer());
         return result;
     }
 
